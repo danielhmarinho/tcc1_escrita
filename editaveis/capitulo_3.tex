@@ -1,27 +1,35 @@
-\chapter*[Capítulo 3]{Capítulo 3}                                                                                                                 
-\addcontentsline{toc}{chapter}{Tamanho Funcional de Software} 
+\chapter*[Capítulo 3]{Capítulo 3}
+\addcontentsline{toc}{chapter}{Referencial Teórico}
 
-A contagem de tamanho funcional de software surgiu no ano de 1979, com Albrecht.
-A proposta era estimar o tamanho de um software a partir das funcionalidades
-entregues ao usuário. Estas primeiras métricas ficaram conhecidas como Function
-Points(FP) e Function Points Analysis (FPA) e eram uma alternativa para suprir
-o problema da indústria em estimar prazos e esforço necessário para a o
-desenvolvimento de software.
+\section{Tamanho funcional de Software}
 
-Nos anos seguintes surgiram várias propostas de melhoria e variações do modelo
-apresentado no ano de 1979. No ano de 1986 a International
-Function Point User Group (IFPUG) foi criada como uma organização sem fins
-lucrativos. Sua função era, entre algumas outras, a de promover e disseminar
-o gerenciamento de projetos através do uso de FPA. Em 1996 a International
-Organization for Standardization (ISO), estabeleceu princípios de comum
-entendimento e uma interpretação consistente das  definições que permeavam a
-medição de tamanho funcional.
+A contagem de tamanho funcional de software surgiu no ano de 1979, com Albrecht. A proposta era estimar o tamanho de um software a partir das funcionalidades entregues ao usuário. Estas primeiras métricas ficaram conhecidas como Function Points(FP)  e  Function Points Analysis (FPA)  e eram uma alternativa para suprir o problema da indústria em estimar prazos e esforço necessário para a o desenvolvimento de software.
 
-Segundo Ebert (2014), as companhias passaram a adotar esse modelo de estimativa
-com algumas finalidades. A primeira delas seria alocar melhor os recursos a
-partir de uma primeira estimativa de prazo e esforço necessário para a produção.
-Outro fator seria a estimativa de esforço quando alguma mudança nos requisitos
-do projeto ocorressem. Além disso também seria possível medir a produtividade e
-taxas de entrega de software, possibilitando benchmarks  e análises de pontos
-de melhoria no processo de desenvolvimento.
+Nos anos seguintes surgiram várias propostas de melhoria e variações do modelo apresentado no ano de 1979. No ano de 1986 a International Function Point User Group (IFPUG) foi criada como uma organização sem fins lucrativos. Sua função era, entre algumas outras, a de promover e disseminar o gerenciamento de projetos através do uso de FPA. Em 1996 a International Organization for Standardization (ISO), estabeleceu princípios de comum entendimento e uma interpretação consistente das  definições que permeiam a medição de tamanho funcional. Atualmente a ISO/IEC 20926:2010 regulamenta a análise de pontos de função. Ela define regras e etapas para aplicação da mesma.
 
+O manual de contagem do IFPUG descreve o procedimento de contagem de pontos de função a partir de alguns passos:
+
+Definir as fronteiras de medição, o escopo e o propósito da mesma. A fronteira de um software pode ser definida estabelecendo uma fronteira lógica entre o software a ser medido, seus usuários e a interação com outros softwares. Essa fronteira pode ser subjetiva, consequentemente tornando difícil a delimitação do início de um software e do término de outro.
+Medir as funções de dados. Uma função de dados refere-se aos requisitos na visão do usuário em relação ao armazenamento e a referência de dados da aplicação. Podem ser classificadas em arquivos lógicos interno e externos.
+Medir as funções de transação. Estas funções são caracterizadas pelo processamento de dados por uma funcionalidade provida ao usuário. Podemos classificá-las em três tipos: saída externa, entrada externa e consulta externa e definir a complexidade de cada uma como baixa, média e alta.
+Calcular o tamanho funcional. A partir da soma da complexidade das funções da dos e das funções de transação é possível calcular um tamanho total em pontos de função de um software. Vale ressaltar que existem aspectos para ajustar os pontos de função de acordo com a necessidade do projeto.
+Reportar os resultados. O último passo listado pelo manual corresponde ao relato dos resultados obtidos pela contagem, além de interpretações e possíveis tomadas de decisões a partir dos valores obtidos.
+
+As tabelas abaixo descrevem a pontuação de funções de dados e funções de transação de acordo com a complexidades medidas durante a contagem:
+
+
+Improvements to the Function Point Analysis Method : A Systematic Literature Review
+
+
+Apesar da eficiência da contagem de pontos de função, ao longo dos anos estudos foram feitos a fim de descobrir problemas, lacunas do processo e possíveis melhorias para o mesmo. Buscando saber quais seriam esses problemas e alternativas para solucionar essas lacunas, em 2015 três autores brasileiros realizaram um processo de revisão sistemática na literatura para agrupar as observações feitas por outros autores na área.
+
+Os autores classificaram os problemas encontrados em três tipos: Peso e complexidade, independência de tecnologia e ajuste da pontuação. As principais críticas a parte de peso e complexidade da contagem de pontos de função diz respeito a mesma classificação em complexidade de duas funções de transação ou de dados com diferentes quantidades de campos e referências a arquivos. Outra crítica seria o espaçamento entre as complexidades. Alguns autores acreditam que definir apenas como baixa, média e alta pode ser muito e alto e acabar não detalhando de forma mais aproximada a real complexidade de desenvolvimento de uma funcionalidade.
+
+Problemas relacionados a independência de tecnologia também são citados na revisão sistemática feita pelos autores. O principal questionamento dos pesquisadores é a falta de adaptação do processo de contagem às novas linguagens de programação. A abordagem não reflete o atual desenvolvimento de software, principalmente o advento e crescimento da orientação a objetos. A independência de tecnologias também diz respeito ao hardware, muito diferente hoje do que a existente a 20 anos atrás.
+
+Por fim, o estudo relata problemas como ajuste do ponto de função. Alguns autores afirmam que o ajuste não considera  importantes requisitos não funcionais, dentre eles: usabilidade, manutenibilidade, eficiência, e portabilidade.
+
+Mesmo com os problemas e lacunas descobertos ao longo dos anos, a indústria de desenvolvimento de software continuam usando a contagem de pontos de função para a estimativa de tamanho de software. Segundo Ebert (2014), as companhias passaram a adotar esse modelo de estimativa com algumas finalidades. A primeira delas seria alocar melhor os recursos a partir de uma primeira estimativa de prazo e esforço necessário para a produção. Outro fator seria a estimativa de esforço quando alguma mudança nos requisitos do projeto ocorresse. Além disso também seria possível medir a produtividade e taxas de entrega de software, possibilitando benchmarks  e análises de pontos de melhoria no processo de desenvolvimento.
+
+A utilização dos pontos de função para estimativas de projeto passou a ser usada também por órgãos de governo e não só por companhias ou fábricas de desenvolvimento de software. O Manual de Métricas de Software(2016) do SISP cita essa utilização do processo em órgãos e em empresas privadas, além dos benefícios obtidos por ambos pela utilização dos mesmo:  “Diversas instituições públicas e privadas têm utilizado a métrica Ponto de Função(PF) nas estimativas e dimensionamento de tamanho funcional de projetos de software devido aos diversos benefícios de utilização desta métrica, destacando-se: regras de contagem objetivas, independência da solução tecnológica utilizada e facilidade de
+estimativa nas fases iniciais do ciclo de vida do software.”
