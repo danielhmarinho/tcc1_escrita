@@ -1,11 +1,16 @@
-\chapter*[Capítulo 3]{Capítulo 3}
-\addcontentsline{toc}{chapter}{Referencial Teórico}
+\part{Tamanho Funcional de Software}
 
-\section{Tamanho funcional de Software}
+\chapter[Capítulo 3]{Capítulo 3}
+
+Este capítulo descreve o surgimento da contagem de tamanho funcional, a técnica de contagem de pontos de função (IFPUG) pelo manul do CPM.
+
+\section{Tamanho Funcional de Software}
 
 A contagem de tamanho funcional de software surgiu no ano de 1979, com Albrecht. A proposta era estimar o tamanho de um software a partir das funcionalidades entregues ao usuário. Estas primeiras métricas ficaram conhecidas como Function Points(FP)  e  Function Points Analysis (FPA)  e eram uma alternativa para suprir o problema da indústria em estimar prazos e esforço necessário para a o desenvolvimento de software.
 
-Nos anos seguintes surgiram várias propostas de melhoria e variações do modelo apresentado no ano de 1979. No ano de 1986 a International Function Point User Group (IFPUG) foi criada como uma organização sem fins lucrativos. Sua função era, entre algumas outras, a de promover e disseminar o gerenciamento de projetos através do uso de FPA. Em 1996 a International Organization for Standardization (ISO), estabeleceu princípios de comum entendimento e uma interpretação consistente das  definições que permeiam a medição de tamanho funcional. Atualmente a ISO/IEC 20926:2010 regulamenta a análise de pontos de função. Ela define regras e etapas para aplicação da mesma.
+Nos anos seguintes surgiram várias propostas de melhoria e variações do modelo apresentado no ano de 1979. No ano de 1986 a International Function Point User Group (IFPUG) foi criada como uma organização sem fins lucrativos. Sua função era, entre algumas outras, a de promover e disseminar o gerenciamento de projetos através do uso de FPA. Em 1996 a International Organization for Standardization (ISO), estabeleceu princípios de comum entendimento e uma interpretação consistente das  definições que permeiam a medição de tamanho funcional. Atualmente a ISO/IEC 20926:2010 regulamenta a análise de pontos de função. Ela define regras e etapas para aplicação da mesma em projetos de desenvolvimento e manutenção de software.
+
+\section{Contagem de Pontos de Função}
 
 O manual de contagem do IFPUG descreve o procedimento de contagem de pontos de função a partir de alguns passos:
 
@@ -23,6 +28,16 @@ O manual de contagem do IFPUG descreve o procedimento de contagem de pontos de f
 
 \end{itemize}
 
+A figura a seguir representa os passos descritos anteriormente para a realização do procedimento de contagem de pontos de função:
+
+\begin{figure}[h]
+	\centering
+	\label{fig01}
+		\includegraphics[keepaspectratio=true,scale=0.4]{figuras/fig01.eps}
+	\caption{Processo de contagem de pontos de função. Fonte: Roteiro de métricas do SISP}
+\end{figure}
+
+
 As tabelas abaixo descrevem a pontuação de funções de dados e funções de transação de acordo com a complexidades medidas durante a contagem:
 
 
@@ -39,5 +54,4 @@ Por fim, o estudo relata problemas como ajuste do ponto de função. Alguns auto
 
 Mesmo com os problemas e lacunas descobertos ao longo dos anos, a indústria de desenvolvimento de software continuam usando a contagem de pontos de função para a estimativa de tamanho de software. Segundo Ebert (2014), as companhias passaram a adotar esse modelo de estimativa com algumas finalidades. A primeira delas seria alocar melhor os recursos a partir de uma primeira estimativa de prazo e esforço necessário para a produção. Outro fator seria a estimativa de esforço quando alguma mudança nos requisitos do projeto ocorresse. Além disso também seria possível medir a produtividade e taxas de entrega de software, possibilitando benchmarks  e análises de pontos de melhoria no processo de desenvolvimento.
 
-A utilização dos pontos de função para estimativas de projeto passou a ser usada também por órgãos de governo e não só por companhias ou fábricas de desenvolvimento de software. O Manual de Métricas de Software(2016) do SISP cita essa utilização do processo em órgãos e em empresas privadas, além dos benefícios obtidos por ambos pela utilização dos mesmo:  “Diversas instituições públicas e privadas têm utilizado a métrica Ponto de Função(PF) nas estimativas e dimensionamento de tamanho funcional de projetos de software devido aos diversos benefícios de utilização desta métrica, destacando-se: regras de contagem objetivas, independência da solução tecnológica utilizada e facilidade de
-estimativa nas fases iniciais do ciclo de vida do software.”
+A utilização dos pontos de função para estimativas de projeto passou a ser usada também por órgãos de governo e não só por companhias ou fábricas de desenvolvimento de software. O Roteiro de Métricas de Software(2016) do SISP cita essa utilização do processo em órgãos e em empresas privadas, além dos benefícios obtidos por ambos pela utilização dos mesmo:  “Diversas instituições públicas e privadas têm utilizado a métrica Ponto de Função(PF) nas estimativas e dimensionamento de tamanho funcional de projetos de software devido aos diversos benefícios de utilização desta métrica, destacando-se: regras de contagem objetivas, independência da solução tecnológica utilizada e facilidade de estimativa nas fases iniciais do ciclo de vida do software.”
