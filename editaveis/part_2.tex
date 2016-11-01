@@ -2,6 +2,8 @@
 
 \chapter[Extreme Programming]{Extreme Programming}
 
+Este capítulo fará uma abordagem a metodologia chamada Extreme Programming. Serão tratadas suas características, benefícios de sua utilização além dos pilares que definem a metodologia: seus valores, princípios e práticas.
+
 \section{Metodologias ágeis}
 
 As abordagem de desenvolvimento de software vem mudando drasticamente na última década. Existem várias desvantagens acerca das metodologias tradicionais e bem documentadas, consideradas muito “pesadas” para algumas abordagens. Em resposta a essas abordagens, um novo grupo de metodologias têm aparecido nos últimos anos. Estas metodologias são as conhecidas como metodologias ágeis. \cite{Agarwal:2008}
@@ -12,7 +14,7 @@ Neste trabalho apenas nos aprofundaremos na metodologia XP. Seus fundamentos e p
 
 \section{O que é o XP}
 
-Segundo Kent Beck,  Extreme Programming (XP) é sobre mudança social. é sobre deixar ir embora nossos velhos hábitos e manias que antes faziam parte de uma adaptação forçada, mas que hoje em dia deixam de ser adaptação, para ser aquilo que define como fazer o nosso trabalho da melhor forma possível. é sobre abrir mão das defesas que nos protegem, mas interferem em nossa produtividade.
+Segundo Kent Beck, \cite{Beck:2004} Extreme Programming (XP) é sobre mudança social. é sobre deixar ir embora nossos velhos hábitos e manias que antes faziam parte de uma adaptação forçada, mas que hoje em dia deixam de ser adaptação, para ser aquilo que define como fazer o nosso trabalho da melhor forma possível. é sobre abrir mão das defesas que nos protegem, mas interferem em nossa produtividade.
 
 Extreme Programming (XP) é um estilo de desenvolvimento de software focado na excelência na aplicação de técnicas de programação, comunicação clara e trabalho em equipe. O XP também pode ser descrito como uma filosofia de desenvolvimento de software baseada em valores, sendo eles: comunicação, feedback, simplicidade, coragem e respeito.
 
@@ -20,9 +22,9 @@ Além dos valores, a filosofia de desenvolvimento do XP também possui princípi
 
 \begin{figure}[h]
 	\centering
-	\label{fig02}
-		\includegraphics[keepaspectratio=true,scale=0.6]{figuras/fig02.eps}
-	\caption{Representação Visual do XP. Fonte: Kent Beck, Extremme Programming Explained}
+	\label{fig01}
+		\includegraphics[keepaspectratio=true,scale=0.6]{figuras/fig01.eps}
+	\caption{Representação Visual do XP. Fonte: Kent Beck, Extreme Programming Explained}
 \end{figure}
 
 A seguir serão descritas as características gerais do valores, os princípios do Extreme Programming, e uma explicação sobre todas as práticas propostas pela metodologia.
@@ -81,6 +83,50 @@ O Extreme Programming também preza por príncipios. Estes podem ser considerado
 
 \end{enumerate}
 
+Princípios são a base de sustentação para as práticas do XP. A próxima seção será focada na descrição das práticas do XP. São elas que, em sua maior parte, acompanham e guiam o desenvolvimento de software durante seus ciclos de produção.
+
+\section{Práticas}
+
+O conjunto de práticas do XP tem a finalidade de aumentar a produtividade enquanto mantém a qualidade do produto. (Maurer). As práticas são o último elo que compõe a ponte descrita por Kent Beck. A sustentação e travessia da mesma depende de todos os elementos que a compõe. A figura \ref{fig:fig02} mostra um detalhamento das práticas presentes no XP:
+
+\begin{figure}[ht]
+	\centering
+	\label{fig02}
+		\includegraphics[keepaspectratio=true,scale=0.5]{figuras/fig02.eps}
+	\caption{Práticas do XP. Fonte: Kent Beck, Extreme Programming Explained}
+\end{figure}
+
+Podemos descrever um número enorme de práticas  neste trabalho, entretanto o foco será apenas descrever as práticas mais utilizadas pelo mercado e aquelas que, de alguma forma, agreguem valor à construção de uma metodologia de desenvolvimento baseada no XP, proposta deste trabalho.
+
+\begin{itemize}
+
+	\item \textbf{Envolvimento dos Stakeholders:} Determinar e priorizar os requisitos é uma prática fundamental para o sucesso de um projeto.  Esta prática envolve agregar valor ao desenvolvimento de software. Conforme as mudanças emergem, os desenvolvedores podem consultar o cliente para entender suas necessidades e prioridades ao invés de especular através de uma documentação robusta o que seria a prioridade.
+
+	\item \textbf{Pequenas Versões:} Devido a mudança constante de requisitos, o XP mantém ciclos com pequenas versões para garantir que cada das mesmas produza um software com valor ao cliente. Ciclos pequenos com lançamento de pequenas versões reduz os riscos e permite a adaptação dos desenvolvedores as mudanças dos requisitos.
+
+	\item \textbf{Metáfora:} Uma metáfora representa uma visão do sistema que pode ser compreendida por ambas as partes, tanto técnica quanto de negócios. Geralmente é uma ideia que representa as funcionalidades básicas do sistema a ser desenvolvido.
+
+	\item \textbf{Testes:} Teste são uma parte fundamental do XP. Sejam testes de aceitação desenvolvidos pelos clientes, ou testes unitários construídos pelos desenvolvedores do software. Todos eles têm a função de prevenir erros e guiar os desenvolvedores  na validação da funcionalidade após o código escrito.
+
+	\item \textbf{Projeto Simples:} O XP não prevê esforço no desenvolvimento de uma solução robusta para um problema. Resolver os problemas de hoje, evitando redundâncias, com o menor número de classes e métodos possíveis é o objetivo do desenvolvedor. Códigos com um design simples facilitam a manutenção sem a necessidade de documentação extensa. Isso evita predições erradas sobre o produto, além do gasto de recursos para refatoração.
+
+	\item \textbf{Refatoração:} A refatoração pode ser considerada como qualquer mudança que melhore a manutenibilidade e o entendimento do código fonte, mas não alterando a funcionalidade do mesmo. \cite{Fowler:1999} A refatoração é um fator importante dentro do projeto devido ao fato da pouca documentação. O código deve ser de simples entendimento e compreensão, assim como a forma mais simples de código para que os testes escritos rodem.
+
+	\item \textbf{Programação em pares:} No XP a produção do código é feita por duas pessoas trabalhando em uma única máquina.  Uma pessoa controla  teclado e mouse, pensando na resolução do problema e se aquela abordagem funcionará para determinada situação. A segunda pessoa pensa de forma mais estratégica, avaliando se a solução aplicada é a melhor possível para desenvolver a funcionalidade proposta. As posições são trocadas constantemente durante o dia.
+
+	\item \textbf{Jogo de Planejamento:} O objetivo desta prática é planejar o escopo do próximo ciclo de desenvolvimento. São avaliadas as prioridades dos desenvolvedores e do negócio. São definidas quais funcionalidades mais importantes, quais podem ser postergadas e quais são essenciais para o desenvolvimento do sistema. Ao final do planejamento são definidas as funcionalidades a serem desenvolvidas, de acordo com a experiência do desenvolvedores e com o espaço de tempo para o próximo ciclo.
+
+	\item \textbf{40 horas por semana:} De acordo com a metodologia, nenhuma pessoa pode trabalhar mais de 40 horas por semana sem que sua produtividade seja afetada. Mesmo que os desenvolvedores sejam pressionados a trabalhar além deste período na semana, o resultado, na maioria das vezes é queda de produtividade e qualidade do produto.
+
+	\item \textbf{Propriedade Coletiva de Código:} Todos podem modificar qualquer parte do código a todo o momento. Não existe propriedade individual de nenhum trecho de código. A propriedade coletiva auxilia na troca de conhecimento entre os membros e evita problemas quando algum desenvolvedor deixa a equipe, já que todos os integrantes tem conhecimento de todas as partes do código.
+
+	\item \textbf{Padrões de Codificação:} Padrões de código são uma obrigação em um projeto onde integrantes modificam constantemente partes do sistema. Padrões facilitam o entendimento e a manutenção além de tornar o código consistente.
+
+	\item \textbf{Integração Contínua:} Desenvolvedores devem integrar o código sempre que possível. Integrando o código uma vez ao dia garante que sempre haverá um novo executável com novas funcionalidades para a validação do cliente.
+
+\end{itemize}
+
+Esta seção encerra a breve visão sobre a metodologia usada como base para o desenvolvimento deste trabalho. A próxima seção tratará das adaptações feitas para a utilização do XP por apenas uma pessoa.
 
 
 \chapter[Tamanho Funcional de Software]{Tamanho Funcional de Software}
@@ -115,8 +161,8 @@ A figura a seguir representa os passos descritos anteriormente para a realizaç�
 
 \begin{figure}[h]
 	\centering
-	\label{fig01}
-		\includegraphics[keepaspectratio=true,scale=0.4]{figuras/fig01.eps}
+	\label{fig03}
+		\includegraphics[keepaspectratio=true,scale=0.4]{figuras/fig03.eps}
 	\caption{Processo de contagem de pontos de função. Fonte: Roteiro de métricas do SISP}
 \end{figure}
 
