@@ -2,105 +2,55 @@
 
 \chapter[Extreme Programming]{Extreme Programming}
 
-Este capítulo fará uma abordagem a metodologia chamada Extreme Programming. Serão tratadas suas características, benefícios de sua utilização além dos pilares que definem a metodologia: seus valores, princípios e práticas.
+Este capítulo fará uma abordagem a metodologia chamada \textit{Extreme Programming}. Serão tratadas suas características, benefícios de sua utilização além dos pilares que definem a metodologia: seus valores, princípios e práticas.
+Também abordará um contexto diferente ao desenvolvimento de software por meio de um time, quando o desenvolvedor trabalha sozinho em um projeto.
 
 \section{Metodologias ágeis}
 
 As abordagem de desenvolvimento de software vem mudando drasticamente na última década. Existem várias desvantagens acerca das metodologias tradicionais e bem documentadas, consideradas muito “pesadas” para algumas abordagens. Em resposta a essas abordagens, um novo grupo de metodologias têm aparecido nos últimos anos. Estas metodologias são as conhecidas como metodologias ágeis. \cite{Agarwal:2008}
 
-As metodologias ágeis envolvem menos documentação e são mais focadas no código fonte do produto. Elas são mais adaptativas do que as consideradas “tradicionais”. Muitas metodologias hoje caminham para o lado ágil. Todas possuem características similares, mas também diferenças significativas. Entre as várias metodologias ágeis dos dias de hoje, podemos destacar o XP (Extreme Programming), Scrum e o Crystal.
+As metodologias ágeis envolvem menos documentação e são mais focadas no código fonte do produto. Elas são mais adaptativas do que as consideradas “tradicionais”. Muitas metodologias hoje caminham para o lado ágil. Todas possuem características similares, mas também diferenças significativas. Entre as várias metodologias ágeis dos dias de hoje, podemos destacar o XP(\textit{Extreme Programming}), \textit{Scrum} e o \textit{Crystal.} \cite{Agarwal:2008}
 
 Neste trabalho apenas nos aprofundaremos na metodologia XP. Seus fundamentos e princípios serão a base para a construção da metodologia e da definição do processo de desenvolvimento de software descritos no próximo capítulo deste trabalho.
 
 \section{O que é o XP}
 
-Segundo Kent Beck, \cite{Beck:2004} Extreme Programming (XP) é sobre mudança social. é sobre deixar ir embora nossos velhos hábitos e manias que antes faziam parte de uma adaptação forçada, mas que hoje em dia deixam de ser adaptação, para ser aquilo que define como fazer o nosso trabalho da melhor forma possível. é sobre abrir mão das defesas que nos protegem, mas interferem em nossa produtividade.
+Segundo Kent Beck, \cite{Beck:2004} \textit{Extreme Programming} é sobre mudança social. é sobre deixar ir embora nossos velhos hábitos e manias que antes faziam parte de uma adaptação forçada, mas que hoje em dia deixam de ser adaptação, para ser aquilo que define como fazer o nosso trabalho da melhor forma possível. é sobre abrir mão das defesas que nos protegem, mas interferem em nossa produtividade.
 
-Extreme Programming (XP) é um estilo de desenvolvimento de software focado na excelência na aplicação de técnicas de programação, comunicação clara e trabalho em equipe. O XP também pode ser descrito como uma filosofia de desenvolvimento de software baseada em valores, sendo eles: comunicação, feedback, simplicidade, coragem e respeito.
+\textit{Extreme Programming} é um estilo de desenvolvimento de software focado na excelência na aplicação de técnicas de programação, comunicação clara e trabalho em equipe. O XP também pode ser descrito como uma filosofia de desenvolvimento de software baseada em valores, sendo eles: comunicação, feedback, simplicidade, coragem e respeito. \cite{Beck:1999}
 
-Além dos valores, a filosofia de desenvolvimento do XP também possui princípios e suas práticas. O Extreme Programming nada mais é do que uma junção harmoniosa destas três vertentes. Kent Beck descreve em seu livro uma ponte, que representa os três elos presentes no XP. A figura abaixo representa a ponte descrita por Kent:
+Além dos valores, a filosofia de desenvolvimento do XP também possui princípios e suas práticas. Os princípios fundamentais são o foco no aspecto humano e social do desenvolvimento de software, na qualidade do software e na busca do benefício mútuo  de desenvolvedores e clientes de um projeto.\cite{Beck:2004} As pŕaticas terão uma abordagem mais detalhada a frente, já que são fundamentais para o entendimento de um ciclo de desenvolvimento dentro do XP.
+
+O \textit{Extreme Programming} nada mais é do que uma junção harmoniosa destas três vertentes. Kent Beck descreve em seu livro uma ponte, que representa os três elos presentes no XP. A figura abaixo representa a ponte descrita por Kent, nela podemos ver o hiato entre os valores e as práticas presentes no XP,  estes são os princípios presentes na metodologia.\cite{Beck:2004}
 
 \begin{figure}[h]
 	\centering
+		\includegraphics[keepaspectratio=true,scale=0.7]{figuras/fig01.eps}
+	\caption{Representação Visual do XP \cite{Beck:2004}}
 	\label{fig01}
-		\includegraphics[keepaspectratio=true,scale=0.6]{figuras/fig01.eps}
-	\caption{Representação Visual do XP. Fonte: Kent Beck, Extreme Programming Explained}
 \end{figure}
 
-A seguir serão descritas as características gerais do valores, os princípios do Extreme Programming, e uma explicação sobre todas as práticas propostas pela metodologia.
-
-\section{Valores}
-
-A comunicação é o fator mais importante em um time de desenvolvimento. Muitas vezes, quando um problema surge no desenvolvimento, certamente algum membro do time já tem a resposta para o mesmo. A falta da comunicação é aquilo que impede a transformação desta solução em código por alguém que teria a capacidade técnica para tal implementação.
-
-Simplicidade pode ser considerada o valor mais “inteligente” dentro do XP. Fazer um sistema simples, de fácil entendimento e manutenção é uma tarefa árdua. Focar em resolver os problemas de “hoje” de uma forma graciosa o suficiente para que o amanhã não seja um problema é o objetivo principal da metodologia. Em poucas palavras: Devemos saber facilmente onde estamos e uma maneira simples de chegar onde queremos.
-
-Definir as direções de um projeto antes de adquirir a experiência necessária para tal tarefa pode gerar mudanças. Quando falamos de mudança dentro do desenvolvimento de software podemos estar falando dos requisitos, da arquitetura do sistema ou mesmo do código fonte. Mudanças dentro do projeto fazem surgir a necessidade de feedback.
-
-O feedback pode ser um mecanismo efetivo para a equipe se aproximar de suas metas. Ele pode se manifestar de várias formas, algumas delas são:
-
-\begin{itemize}
-
-\item Opiniões sobre uma ideia, debatendo com seu time sobre a viabilidade da mesma;
-
-\item Como implementar uma ideia no código e como seria o estado do mesmo após essa implementação;
-
-\item As dificuldades para o deploy deste código após a resolução de um problema;
-
-\item A melhor forma de testar um trecho de código fonte;
-
-\end{itemize}
-
-Os times devem ser capazes de absorver a maior quantidade de feedback possível. Quanto mais cedo um problema é descoberto, mais rápido ele será solucionado.
-
-A solução rápida dos problemas nos remete a outro valor presente no XP, a coragem. Quando os desenvolvedores se deparam com problemas, tomar uma atitude e resolvê-lo o mais rápido possível é encorajado pela metodologia. Entretanto, essa atitude não deve ser tomada sem o conhecimento do time ou sem pensar no benefício do mesmo. Uma coragem “individualista” não leva a bons resultados dentro do projeto.
-
-Os valores tem a intenção de balancear e ser o suporte entre eles próprios. Melhorar a sua comunicação com a equipe pode ajudar a alcançar a simplicidade desejada dentro do seu projeto. Alcançar essa simplicidade dá ao desenvolvedor menos motivos para que as conversas entre o time se estendam por mais tempo do que deveriam.
-
-Por fim, Kent Beck reforça a importância do respeito dentro do desenvolvimento de software. Para ele, é o valor que suporta todos os outros 4. Se os outros membros do time não ligam para sua equipe e não respeitam a opinião da mesma, o projeto nunca poderá ser bem sucedido.
-
-\section{Princípios}
-
-O Extreme Programming também preza por príncipios. Estes podem ser considerados tão abstratos quanto os valores citados na seção anterior. Como a explicação sobre cada um deles é extensa e sua interpretação pode ser mais complexa para alguns, nesta parte apenas serão citados com uma breve descrição baseada na metodologia e na análise de Kent em seu livro:
-
-\begin{enumerate}
-
-	\item Humanidade: O XP e as metodologias ágeis como um todo tem seu foco no aspecto humano. As necessidades das pessoas e são colocadas ao lado das necessidades do time. Afinal, software é desenvolvido por pessoas.
-
-	\item Aspecto Econômico: é fundamental entender que todo o desenvolvimento deve ser feito pensando no aspecto de “valor”. Valor para o negócio, para o cliente, para o time e para a sociedade como um todo. Pensar em soluções que sejam válidas em um futuro próximo também é pensar em aspectos econômicos.
-
-	\item Benefício Mútuo:  O princípio mais complexo de ser cumprido dentro dos times. Sempre que tomamos uma decisão técnica, estamos pensando no benefício de um fator em detrimento de outro. Um bom exemplo  de como a aplicação deste princípio é complexa seria a construção de um código já pensando na manutenção do mesmo por outra pessoa. A tarefa de pensar em soluções que sempre beneficiam todas as partes envolvidas pode ser exaustiva em vários casos.
-
-	\item Melhoria:  Não existem processos perfeitos, códigos perfeitos ou o design perfeito. Tudo pode e deve ser melhorado. Refatoração de código e melhorias arquiteturais ou de design são fundamentais e encorajadas pela metodologia.
-
-	\item Reflexão:   Bons time e bons desenvolvedores sempre devem refletir sobre o trabalho que estão executando, analisar falhas e acertos. Práticas do XP como pareamento e integração contínua são fundamentais na prática de reflexão dentro do ambiente de trabalho.
-
-	\item Oportunidades: Enxergar os problemas durante o desenvolvimento de software como oportunidades de mudança. Nestes momento o desenvolvedor pode entender o que melhorar e como mudanças podem ser benéficas ao time.
-
- 	\item Qualidade: O foco na qualidade é necessário para uma maior taxa de entrega de produto. Ao contrário do que se pode pensar, um produto com baixa qualidade pode ter seu desenvolvimento mais rápido no início, entretanto a taxa de entrega tem a tendência a decair no futuro conforme os problemas gerados pela baixa qualidade do produto vão emergindo.
-
-	\item Baby-Steps: Em uma metodologia que busca abraçar mudanças, muitas delas podem ser grandes e impactantes. O desgaste do time desenvolvendo solução em pequenos passos é sempre menor do que a perda de tempo do mesmo corrigindo erros ou abortando grandes passos.
-
-\end{enumerate}
-
-Princípios são a base de sustentação para as práticas do XP. A próxima seção será focada na descrição das práticas do XP. São elas que, em sua maior parte, acompanham e guiam o desenvolvimento de software durante seus ciclos de produção.
+A seguir serão descritas características gerais das práticas propostas pela metodologia, fundamentais para o entendimento do ciclo de desenvolvimento do XP.
 
 \section{Práticas}
 
-O conjunto de práticas do XP tem a finalidade de aumentar a produtividade enquanto mantém a qualidade do produto. (Maurer). As práticas são o último elo que compõe a ponte descrita por Kent Beck. A sustentação e travessia da mesma depende de todos os elementos que a compõe. A figura \ref{fig:fig02} mostra um detalhamento das práticas presentes no XP:
+O conjunto de práticas do XP tem a finalidade de aumentar a produtividade enquanto mantém a qualidade do produto. \cite{Maurer:2002} As práticas são o último elo que compõe a ponte descrita por Kent Beck. A sustentação e travessia da mesma depende de todos os elementos que a compõe. A figura \ref{fig02} mostra um detalhamento das práticas presentes no XP:
 
 \begin{figure}[ht]
 	\centering
-	\label{fig02}
 		\includegraphics[keepaspectratio=true,scale=0.5]{figuras/fig02.eps}
-	\caption{Práticas do XP. Fonte: Kent Beck, Extreme Programming Explained}
+	\caption{Práticas do XP \cite{Beck:2004}}
+	\label{fig02}
 \end{figure}
 
-Podemos descrever um número enorme de práticas  neste trabalho, entretanto o foco será apenas descrever as práticas mais utilizadas pelo mercado e aquelas que, de alguma forma, agreguem valor à construção de uma metodologia de desenvolvimento baseada no XP, proposta deste trabalho.
+Podemos descrever um número enorme de práticas neste trabalho, entretanto o foco será apenas descrever as práticas mais utilizadas pelo mercado e aquelas que, de alguma forma, agreguem valor à construção de uma metodologia de desenvolvimento baseada no XP.
+
+\cite{Maurer:2002} descreve de forma sucinta as práticas mais utilizadas pelo mercado e mais importantes dentro de um ciclo de desenvolvimento de software:
+
 
 \begin{itemize}
 
-	\item \textbf{Envolvimento dos Stakeholders:} Determinar e priorizar os requisitos é uma prática fundamental para o sucesso de um projeto.  Esta prática envolve agregar valor ao desenvolvimento de software. Conforme as mudanças emergem, os desenvolvedores podem consultar o cliente para entender suas necessidades e prioridades ao invés de especular através de uma documentação robusta o que seria a prioridade.
+	\item \textbf{Envolvimento dos \textit{Stakeholders}:} Determinar e priorizar os requisitos é uma prática fundamental para o sucesso de um projeto.  Esta prática envolve agregar valor ao desenvolvimento de software. Conforme as mudanças emergem, os desenvolvedores podem consultar o cliente para entender suas necessidades e prioridades ao invés de especular através de uma documentação robusta o que seria a prioridade.
 
 	\item \textbf{Pequenas Versões:} Devido a mudança constante de requisitos, o XP mantém ciclos com pequenas versões para garantir que cada das mesmas produza um software com valor ao cliente. Ciclos pequenos com lançamento de pequenas versões reduz os riscos e permite a adaptação dos desenvolvedores as mudanças dos requisitos.
 
@@ -126,12 +76,25 @@ Podemos descrever um número enorme de práticas  neste trabalho, entretanto o f
 
 \end{itemize}
 
-Esta seção encerra a breve visão sobre a metodologia usada como base para o desenvolvimento deste trabalho. A próxima seção tratará das adaptações feitas para a utilização do XP por apenas uma pessoa.
+Após uma breve explicação das características da metodologia e um aprofundamento em suas práticas, a próxima seção descreve-rá o ciclo de trabalho proposto pelo Extreme Programming.
+
+\section{Visão de Projeto no XP}
+
+O XP deixa o processo de desenvolvimento tradicional de lado. EM vez de analisar, planejar e desenvolver um design visando um futuro muito distante, o XP explora a redução de custos na mudança do software desenvolvendo um pouco de cada uma dessas atividades durante o ciclo de desenvolvimento de software. \cite{Beck:1999} A figura \ref{fig03} ilustra o ciclo de desenvolvimento de um projeto na visão do XP.
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[keepaspectratio=true,scale=0.9]{figuras/fig03.eps}
+	\caption{Processo de Desevolvimento XP \cite{Process}}
+	\label{fig03}
+\end{figure}
+
+
 
 
 \chapter[Tamanho Funcional de Software]{Tamanho Funcional de Software}
 
-Este capítulo descreve o surgimento da contagem de tamanho funcional, a técnica de contagem de pontos de função (IFPUG) pelo manul do CPM.
+Este capítulo descreve o surgimento da contagem de tamanho funcional, a técnica de contagem de pontos de função (IFPUG) pelo manual do CPM.
 
 \section{Tamanho Funcional de Software}
 
@@ -161,8 +124,8 @@ A figura a seguir representa os passos descritos anteriormente para a realizaç�
 
 \begin{figure}[h]
 	\centering
-	\label{fig03}
-		\includegraphics[keepaspectratio=true,scale=0.4]{figuras/fig03.eps}
+	\label{fig04}
+		\includegraphics[keepaspectratio=true,scale=0.4]{figuras/fig04.eps}
 	\caption{Processo de contagem de pontos de função. Fonte: Roteiro de métricas do SISP}
 \end{figure}
 
