@@ -103,6 +103,72 @@ A próxima seção terá um foco nas diferenças entre um ciclo de desenvolvimen
 
 \section{Um desenvolvedor no papel de time}
 
+O XP foca em situações que envolvem times pequenos, onde o desenvolvimento é feito em pares. Muitas das práticas do XP necessitam de trabalho em equipe, algum desenvolvedor revisando o código de outro. Todo o desenvolvimento no XP, feito em pares, necessita da revisão constante de código. \cite{Ron:2000}
+
+Existem casos onde a programação em pares é uma prática intangível, onde um único programador trabalha no projeto. Como um consultor independente, você não terá um parceiro para a prática da técnica de pareamento. Em um projeto muito pequeno ou algo experimental, o pareamento pode ser um problema devido ao tamanho das tasks. \cite{Agarwal:2008}
+
+Nestes casos algumas adaptações ao processo e as práticas descritas pelo XP são necessárias. As práticas devem ser adaptadas ao desenvolvedor para que não sejam perdidos seus benefícios. O processo não deve ser tornar oneroso, a adaptação do mesmo e de suas fases se faz necessária para diminuir custos e tempo de desenvolvimento. \cite{Bernabe:2015}
+
+Em seu artigo, \cite{Bernabe:2015} propõe a adaptação do processo de desenvolvimento proposto pelo XP. A figura \ref{fig04} representa visualmente o processo descrito pelo autor:
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[keepaspectratio=true,scale=0.6]{figuras/fig04.eps}
+	\caption{Processo Adaptado XP \cite{Bernabe:2015}}
+	\label{fig04}
+\end{figure}
+
+A primeira fase do processo se resume ao conhecimento e a motivação de desenvolver o produto. O conhecimento sobre tecnologias e avaliação de riscos futuros pode ser muito complexo para apenas um desenvolvedor. A motivação para o desenvolvimento é fundamental, já que o esforço necessário e a gestão pessoal serão grandes inicialmente. \cite{Bernabe:2015}
+
+A definição do \textit{backlog} do produto, ou um conjunto de features que compõe todo o projeto, se mantém da mesma forma.  A única diferença é o local do armazenamento. O autor recomenda fortemente o uso de ferramentas ou “quadros” digitais. Sua portabilidade e flexibilidade se fazem mais úteis ao desenvolvedor do que quadros físicos em uma parede que muitas vezes não trarão visibilidade.
+
+A criação das \textit{user stories} se torna mais simples. O entendimento das mesmas será feito apenas por um desenvolvedor, o que evita lacunas na comunicação de como uma \textit{feature} deve ser implementada.
+
+Um dos maiores desafios em um cenário com um único desenvolvedor, é a estimativa das \textit{user stories}. Não apenas pela falta de proximidade de um cliente, mas por riscos não identificados ou deficiências técnicas que não poderão ser supridas por outros membros da equipe. Nestes casos a única recomendação é comparar as estimativas de cada tarefa a cada iteração para se obter um esforço médio na estimativa das próximas.  \cite{Bernabe:2015}
+
+O planejamento das iterações devem ser feitos priorizando aspectos como duração e quantidade de tarefas a serem feitas. Para um desenvolvedor uma iteração deve durar entre uma ou duas semanas, respeitando um limite de 30 horas semanais. O XP propõe 40 horas semanais, mas desenvolvedores \textit{“freelancers”} muitas vezes trabalham em mais de um projeto semanalmente. Desenvolver uma metáfora para explicar o objetivo da iteração pode ajudar o desenvolvedor a cumprir seus objetivos de forma mais rápida. Vale ressaltar a necessidade de avaliar a experiência do desenvolvedor na hora de selecionar a quantidade de \textit{tasks} a serem executadas durante um ciclo de desenvolvimento. \cite{Bernabe:2015}
+
+Na fase de desenvolvimento o desenvolvedor deve seguir as mesmas práticas e observações propostas pelo XP. A diferença desta fase é a ausência do pareamento para garantir uma maior qualidade de código. Uma solução para esse problema pode ser a técnica conhecida como \textit{Rubber Duck Debugging}. \cite{Andrew:2002} A técnica consiste em colocar um pato de borracha ao seu lado para simular um pareamento. A ideia é que explicando o problema e seu objetivo ao pato, o desenvolvedor consiga identificar o que o código não está fazendo, mas deveria.
+
+As metodologias ágeis incluem uma melhora contínua a cada final de release ou iteração. A vantagem para um único desenvolvedor é que a reavaliação em busca de melhorias pode ser feita várias vezes e sobre todos os aspectos do desenvolvimento. \cite{Bernabe:2015} A fase de revisão visa a melhoria destes aspectos e a preparação para um novo ciclo de desenvolvimento.
+
+Após a revisão das \textit{user stories} e a avaliação de sua completude, o desenvolvedor deve disponibilizar uma versão com as \textit{features} desenvolvidas naquela iteração. \textit{Pequenas releases} são práticas do XP e devem ser mantidas para o aumento de qualidade do código e valor para o cliente.
+
+Esta seção abordou a visão do XP para um desenvolvedor e algumas adaptações a serem feitas no processo de desenvolvimento de software. A próxima seção tratará especificamente das diferenças entre as práticas do XP no contexto de time e no contexto onde apenas um desenvolvedor atua.
+
+\section{Práticas para apenas um desenvolvedor}
+
+Além das adaptações ao processo de desenvolvimento mostradas na seção anterior, o contexto onde apenas um desenvolvedor desenvolve um projeto também necessita de adaptações às práticas descritas pelo XP. \cite{Agarwal:2008} buscou estabelecer uma nova metodologia denominada \textit{PXP(Personal Extreme Programming)}. Em seu artigo, o autor busca comparar as práticas em contextos onde um time atua e onde um desenvolvedor sozinho assume a responsabilidade de todo o projeto.  A tabela abaixo busca mostrar uma síntese de suas observações:
+
+\begin{table}[]
+\centering
+\caption{Análise de Práticas no PXP \cite{Agarwal:2008}}
+\label{table02}
+\resizebox{\textwidth}{!} {
+\begin{tabular}{|c|l|}
+\hline
+\textbf{Pŕaticas}                       & \multicolumn{1}{c|}{\textbf{PXP}}                                                                                                                                                                                                                                                                                                                      \\ \hline
+\textbf{Envolvimento dos Stakeholders}  & \begin{tabular}[c]{@{}l@{}}Se inicialmente você for seu próprio cliente, definir\\ você mesmo as necessidades do projeto é compreensível.\\  Caso existam clientes, o contato deve ser mantido\\ constantemente  com os interessados no projeto.\end{tabular}                                                                                   \\ \hline
+\textbf{Pequenas Versões}               & \begin{tabular}[c]{@{}l@{}}Versões podem ser lançadas pelo desenvolvedor mais\\ facilmente e de forma mais rápida, já que conflitos\\ no código ocorrem com uma frequência muito baixa.\end{tabular}                                                                                                                                              \\ \hline
+\textbf{Metáfora}                       & \begin{tabular}[c]{@{}l@{}}Um único desenvolvedor pode refatorar a metáfora\\  que define o sistema diversas vezes. É mais fácil\\  deixar clara a visão de uma parte do sistema para\\  uma pessoa do que para um time inteiro.\end{tabular}                                                                                                          \\ \hline
+\textbf{Testes}                         & \begin{tabular}[c]{@{}l@{}}Testar o código feito por apenas uma pessoa é simples.\\  O uso de ferramentas de automação de testes também\\  é facilitada devido ao baixo número de conflitos ou\\  quebras de código fonte.\end{tabular}                                                                                                                \\ \hline
+\textbf{Projeto Simples}                & \begin{tabular}[c]{@{}l@{}}Manter o projeto simples com um desenvolvedor é\\  fácil. Em paralelo pode ser desenvolvida uma\\  solução mais robusta, visando uma refatoração futura.\end{tabular}                                                                                                                                                       \\ \hline
+\textbf{Refatoração}                    & \begin{tabular}[c]{@{}l@{}}A refatoração deve ser praticada ao extremo. Todo\\  o código refatorado deve ser testado e integrado\\  imediatamente, já que o mesmo não precisa de\\  permissão do time para ser integrado.\end{tabular}                                                                                                                 \\ \hline
+\textbf{Programação em Pares}           & \begin{tabular}[c]{@{}l@{}}Quando se trabalha sozinho os benefícios do\\  pareamento são perdidos. Uma solução seria pedir\\  a um amigo para revisar seu código, ou técnicas\\  como o \textit{Rubber Duck Debugging}, citado anteriormente.\end{tabular}                                                                                                      \\ \hline
+\textbf{Jogo de Planejamento}           & \begin{tabular}[c]{@{}l@{}}Se o desenvolvedor conhece o suficiente para se\\  passar pelo cliente, basta que ele inverta os papéis\\  por um tempo para escrever as user stories. É uma \\ boa prática estimar, pontuar e priorizar as features\\  mesmo quando está se desenvolvendo sozinho.\end{tabular}                                            \\ \hline
+\textbf{40 horas por semana}            & \begin{tabular}[c]{@{}l@{}}A prática se mantém igual. Não devemos trabalhar mais\\  que 40 horas, pois a produtividade e qualidade do\\  código é afetada pelo stress.\end{tabular}                                                                                                                                                                    \\ \hline
+\textbf{Propriedade Coletiva de Código} & \begin{tabular}[c]{@{}l@{}}Você é dono de todo o código produzido, então não\\  existem problemas com a propriedade do código.\\  Entretanto, você não será beneficiado pelo código de\\  outros desenvolvedores, que em muitos casos pode ser\\  de grande valia. Técnicas para controle de versão de\\  código são mantidas neste caso.\end{tabular} \\ \hline
+\textbf{Padrões de Codificação}         & \begin{tabular}[c]{@{}l@{}}O desenvolvedor define o padrão de codificação pela \\ forma que desenvolve. Vale ressaltar a importância\\  de se seguir um padrão mesmo em situações como essa.\end{tabular}                                                                                                                                           \\ \hline
+\textbf{Integração Contínua}            & \begin{tabular}[c]{@{}l@{}}Se um desenvolvedor trabalha sozinho o código base não\\ sofrerá conflitos vindos de outros desenvolvedores.\\ Mesmo assim a integração contínua ainda é necessária\\ para a integração mais rápida de código novo ao\\ código base.\end{tabular}                                                                       \\ \hline
+\end{tabular}
+}
+\end{table}
+
+Este capítulo abordou a metodologia conhecida como XP, suas características e práticas. Além de fazer uma comparação com uma abordagem da metodologia quando utilizada por apenas um desenvolvedor.
+
+O próximo capítulo trará uma visão geral sobre os Pontos de Função e sua utilização para medição de tamanho funcional de software.
+
+
 \chapter[Tamanho Funcional de Software]{Tamanho Funcional de Software}
 
 Este capítulo descreve o surgimento da contagem de tamanho funcional, a técnica de contagem de pontos de função (IFPUG) pelo manual do CPM.
@@ -135,8 +201,8 @@ A figura a seguir representa os passos descritos anteriormente para a realizaç�
 
 \begin{figure}[h]
 	\centering
-	\label{fig04}
-		\includegraphics[keepaspectratio=true,scale=0.4]{figuras/fig04.eps}
+	\label{fig05}
+		\includegraphics[keepaspectratio=true,scale=0.4]{figuras/fig05.eps}
 	\caption{Processo de contagem de pontos de função. Fonte: Roteiro de métricas do SISP}
 \end{figure}
 
