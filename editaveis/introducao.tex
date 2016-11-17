@@ -15,14 +15,47 @@ A aplicação manual da medição de tamanho funcional é exaustiva e pode consu
 
 Em casos onde os um grande número de requisitos é analisado, e muitos desses são considerados complexos, uma análise especializada é necessária. Recentemente tecnologias e ferramentas têm emergido para automatizar e facilitar a medição de tamanho funcional. \cite{Ebert:2014}
 
+Neste contexto de ferramentas podemos destacar o de software livre, este que tem gerado um engajamento de comunidades e uma maior participação popular no últimos anos. \cite{Eilola:2002} \nocite{Anota:2016}
 
+"Software livre" se refere a liberdade que os usuários têm de executar, copiar, distribuir, estudar e modificar o software de acordo com suas necessidades. Isso significa que o usuário tem acesso ao código fonte do software, além de cópias de suas versões e variações da mesma. \cite{Stallman:2003}
+
+\textit{"Assim sendo, Software livre é uma questão de liberdade, não de preço. Para entender o conceito, pense em "liberdade de expressão", não em "cerveja grátis". "} \cite{Stallman:2003}
+
+O desenvolvimento de software, neste caso de uma ferramenta livre, segue metodologias e processos estruturados para a organização de um time de desenvolvedores. O \textit{Extreme Programming(XP)} oferece uma série de práticas e princípios para guiar o desenvolvedor durante os ciclos de desenvolvimento.
+
+Metodologias ágeis, como o XP, buscam o aumento da organização das empresas enquanto diminuem os problemas com o desenvolvimento de software. Tem o foco na entrega de código executável e vê nas pessoas o fator principal no desenvolvimento de um produto. \cite{Maurer:2002}
+
+Visando o desenvolvimento de um software livre, que atenda as necessidades dos órgãos públicos brasileiros no contexto de medição de tamanho funcional de software, uma parceria com a STI (Secretaria de Tecnologia da Informação) foi estabelecida por meio deste trabalho.
+
+Portanto, este trabalho tem como objetivo o desenvolvimento de uma ferramenta livre, para realizar a contagem de pontos de função e o armazenamento de um histórico das mesma, com a STI como pilar de apoio para a obtenção e validação dos requisitos da presente ferramenta.
 
 \section{Descrição do Problema}
+
+Uma análise de ferramentas presentes no mercado foi feita afim de identificar lacunas e requisitos não funcionais para o presente trabalho.
+
+\begin{table}[ht]
+\centering
+\caption{Avaliação de Ferramentas}
+\label{ferramentas}
+\resizebox{\textwidth}{!} {
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+\textbf{Nome}                                                                & \multicolumn{1}{l|}{\textbf{Windows/Linux}} & \multicolumn{1}{l|}{\textbf{Paga}} & \multicolumn{1}{l|}{\textbf{Versão Demo ou Free}} & \multicolumn{1}{l|}{\textbf{Continua a ser evoluída}} & \multicolumn{1}{l|}{\textbf{Software Livre}} \\ \hline
+\textbf{SCOPE}                                                               &                                             & X                                  &                                                   & X                                                     &                                              \\ \hline
+\textbf{\begin{tabular}[c]{@{}l@{}}FUNCTION POINT\\  WORKBENCH\end{tabular}} &                                             & X                                  & X                                                 & X                                                     &                                              \\ \hline
+\textbf{Sfera}                                                               &                                             & X                                  &                                                   &                                                       &                                              \\ \hline
+\textbf{FPModeler}                                                           & X                                           & X                                  &                                                   & X                                                     &                                              \\ \hline
+\textbf{Metric Studio}                                                       &                                             &                                    & X                                                 & X                                                     &                                              \\ \hline
+\textbf{WINFPA}                                                              &                                             &                                    & X                                                 &                                                       &                                              \\ \hline
+\textbf{Sizify}                                                              & X                                           & X                                  & X                                                 & X                                                     &                                              \\ \hline
+\end{tabular}
+}
+\end{table}
 
 \section{Objetivos}
 
 O objetivo deste  trabalho é desenvolver uma ferramenta para contagem e
-armazenamento de pontos de função, em parceria com a STI,  que se adeque ao
+armazenamento de pontos de função, em parceria com a STI, que se adeque ao
 contexto dos órgão públicos brasileiros e suas necessidades.
 
 Também foram definidos os seguintes objetivos específicos:
