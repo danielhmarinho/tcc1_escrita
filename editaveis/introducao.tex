@@ -31,7 +31,7 @@ Portanto, este trabalho tem como objetivo o desenvolvimento de uma ferramenta li
 
 \section{Descrição do Problema}
 
-Uma análise de ferramentas presentes no mercado foi feita afim de identificar lacunas e requisitos não funcionais para o presente trabalho.
+A tabela \ref{ferramentas} representa os atributos avaliados durante um estudo de ferramentas realizado durante o presente trabalho.
 
 \begin{table}[ht]
 \centering
@@ -52,11 +52,35 @@ Uma análise de ferramentas presentes no mercado foi feita afim de identificar l
 }
 \end{table}
 
+\begin{table}[]
+\centering
+\caption{Análise de funcionalidades das ferramentas}
+\resizebox{\textwidth}{!} {
+\label{ferramentas_2}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Nome}                                                                & \textbf{Criação de Baselines} & \textbf{\begin{tabular}[c]{@{}c@{}}Gerência de Múltiplos\\ Projetos\end{tabular}} & \textbf{Medição de Esforço} & \textbf{Geração de Gráficos} \\ \hline
+\textbf{SCOPE}                                                               & X                             & X                                                                                 & X                           & X                            \\ \hline
+\textbf{\begin{tabular}[c]{@{}l@{}}FUNCTION POINT\\  WORKBENCH\end{tabular}} & X                             & X                                                                                 & X                           & X                            \\ \hline
+\textbf{Sfera}                                                               & X                             & X                                                                                 &                             &                              \\ \hline
+\textbf{FPModeler}                                                           & X                             & X                                                                                 &                             & X                            \\ \hline
+\textbf{Metric Studio}                                                       & X                             &                                                                                   & X                           & X                            \\ \hline
+\textbf{WINFPA}                                                              &                               & X                                                                                 & X                           &                              \\ \hline
+\textbf{Sizify}                                                              & X                             & X                                                                                 &                             &                              \\ \hline
+\end{tabular}
+}
+\end{table}
+
+Esta análise de ferramentas presentes no mercado, mostrou que não existem ferramentas livres disponíveis. Outra observação a ser feita é a de que nenhuma ferramenta atende as necessidades atuais dos órgãos públicos brasileiros, seja por lacunas em seus requisitos funcionais, ou em seus requisitos não funcionais.
+
+O apêndice  deste trabalho traz informações mais detalhadas acerca da análise das ferramentas e fatores observados para a caracterização das mesmas.
+
+
 \section{Objetivos}
 
 O objetivo deste  trabalho é desenvolver uma ferramenta para contagem e
 armazenamento de pontos de função, em parceria com a STI, que se adeque ao
-contexto dos órgão públicos brasileiros e suas necessidades.
+contexto dos órgãos públicos brasileiros e suas necessidades.
 
 Também foram definidos os seguintes objetivos específicos:
 
@@ -75,8 +99,9 @@ Também foram definidos os seguintes objetivos específicos:
   \item Definir um processo de desenvolvimento de software para o contexto de
   desenvolvedor único;
 
-\end{itemize}
+  \item Disponibilizar ferramenta no Portal do Software Público;
 
+\end{itemize}
 
 \section{Organização do Trabalho}
 
