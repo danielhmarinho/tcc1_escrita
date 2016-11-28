@@ -1,11 +1,98 @@
-\part{Resultados}
+\part{Proposta}
 
-\chapter[Resultados]{Resultados}
+\chapter[Proposta]{Proposta}
 
 Este capítulo tem como finalidade abordar os resultados obtidos até o momento. Serão discutidos tópicos como local do repositório, ferramentas escolhidas para o desenvolvimento e justificativas para a escolha das mesmas. Também serão abordados os requisitos obtidos para o desenvolvimento da aplicação.
 
+
+\section{Requisitos}
+
+Esta seção descreve os requisitos obtidos para o desenvolvimento da ferramenta. Alguns desses requisitos foram obtidos a partir do estudo realizado acerca das ferramentas disponíveis no mercado, enquanto o restante foi obtido a partir de reunião com a STI.
+
+\subsection{Requisitos Extraídos a Partir do Estudo das Ferramentas}
+
+A análise das ferramentas presentes no mercado possibilitou com que uma interseção entre os requisitos elicitados fosse feita. Seguem abaixo as \textit{features} levantadas a partir desta interseção:
+
+\begin{itemize}
+
+\item Inserção, exclusão, edição e visualização de perfil de usuário;
+
+\item Inserção, exclusão, edição e visualização de organizações detentoras de
+
+\item projetos de desenvolvimento de software;
+
+\item Inserção, exclusão, edição e visualização de projetos de desenvolvimento de software;
+
+\item Gerenciamento de múltiplos projetos por organização;
+
+\item Criação de contagem de pontos de função para os softwares registrados;
+
+\item Geração de relatórios em pdf;
+
+\item Medição de esforço necessário para desenvolvimento de features;
+
+\item Visualização gráfica de atributos como tamanho total ao longo do tempo e
+esforço;
+
+\item Criação e gerenciamento de Baselines;
+
+\item Trankig acerca de mudanças nas contagens, como o autor da modificação e data da mesma
+
+\end{itemize}
+
+\subsection{Requisitos Extraídos a Partir de Reunião com a STI}
+
+Além dos requisitos elicitados a partir do estudo das ferramentas, outros requisitos foram elicitados por meio de reunião com a STI. Nesta reunião foram abordadas necessidades específicas dos órgãos públicos brasileiros, e alguns esclarecimento acerca dos requisitos não funcionais da ferramenta.
+
+Os requisitos funcionais obtidos foram:
+
+\begin{itemize}
+
+  \item Gerenciamento e controle de acesso de usuários,
+
+  \item Busca por projetos, organizações  dados específicos de preenchimento
+  como funções de transação ou de dados;
+
+\end{itemize}
+
+Requisitos não-funcionais também foram obtidos a partir desta reunião:
+
+\begin{itemize}
+
+  \item Tratamento de fluxo de dados, devido sua grande quantidade;
+
+  \item Questões de segurança como encriptação de dados, autenticação de usuários e bloqueio de acesso externo à aplicação;
+
+  \item Desenvolvimento de formulários dinâmicos para preenchimento das informações acerca das contagens, facilitando a aceitação dos usuários ao sistema;
+
+  \item Disponibilidade da aplicação para múltiplos sistemas operacionais
+
+\end{itemize}
+
 \section{Definição de Ferramentas}
 
+Esta seção apresenta uma explicação sucinta de cada ferramenta utilizada para o desenvolvimento do projeto, assim como, quando necessário, o motivo de suas escolhas. A figura \ref{fig11} ilustra todas as ferramentas a serem utilizadas no presente trabalho.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[keepaspectratio=true,scale=0.8, width=\textwidth]{figuras/fig11.eps}
+	\caption{Ferramentas Escolhidas para o Desevolvimento}
+	\label{fig11}
+\end{figure}
+
+\begin{itemize}
+
+  \item \textbf{Ruby on Rails:} \textit{Framework} de desenvolvimento de aplicações web por meio da linguagem de programação Ruby. Sua arquitetura se baseia em MVC (\textit{Model, View e Controller}) e será utilizada em modo API(\textit{Application Programming Interface}), ou seja, será construída para que forneça um serviço a outra aplicação. Os dados serão disponibilizados via JSON(\textit{JavaScript Object Notation}). A criação de uma API se deve ao fato de que um dos requisitos não funcionais da aplicação é o grande fluxo de dados. Separar o \textit{back-end} da aplicação e o \textit{front-end} melhora o desempenho da aplicação, além de facilitar a manutenção da mesma.
+
+  \item \textbf{React:} Segundo sua própria documentação \cite{React:2014}, o React é um \textit{framework} Javascript desenvolvido para criação de interfaces interativas. A utilização de Javascript se deve ao fato da renderização de componentes ser feita a partir da diferenciação entre estados, ou seja, só serão renderizados novamente componentes cujo seus dados foram alterados. Esta aplicação consumirá os dados providos pela API através de requisições AJAX(\textit{Asynchronous Javascript and XML}), sendo responsável também pela geração de \textit{views} para interação do cliente com o servidor.
+
+  \item \textbf{Travis:} Ferramenta para integração contínua de código. Quando um \textit{commit} for integrado ao repositório da aplicação, a ferramenta criará uma máquina virtual, com configurações pré determinadas pelo desenvolvedor, para execução de testes unitários e de integração. Caso a \textit{build} falhe, o Travis impede que o \textit{commit} ou \textit{merge} seja integrado a \textit{branch}. Caso a \textit{build} passe, é possível configurar a ferramenta para \textit{deploy} automático em sites como Heroku.
+
+  \item \textbf{Gitlab:} Provê controle de versão, revisão de código, \textit{tracking} de \textit{issues} além de espaço para a criação de uma wiki do projeto.
+
+  \item \textbf{Code Climate:} Ferramenta para análise estática de código fonte, além de métricas como duplicação de código e complexidade ciclomática. Possui integração com o repositório do aplicação. Caso algum merge entre branchs diminua a qualidade do código, o Code Climate previne o merge entre as duas branchs.
+
+\end{itemize}
 
 \section{Repositório}
 
