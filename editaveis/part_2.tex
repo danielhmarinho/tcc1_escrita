@@ -212,7 +212,74 @@ A figura a seguir representa os passos descritos anteriormente para a realizaç�
 As tabelas abaixo descrevem a pontuação de funções de dados e funções de transação de acordo com a complexidades medidas durante a contagem:
 
 
+\begin{table}[H]
+\centering
+\caption{Determinar Complexidade de Funções de Dados}
+\label{funcoesdedados}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\multicolumn{1}{|l|}{}                                                                                        & \multicolumn{4}{l|}{\textbf{DER - Dados Elementares Referenciados}}                      \\ \hline
+\multirow{4}{*}{\textbf{\begin{tabular}[c]{@{}c@{}}RLR – Registros\\  Lógicos \\ Referenciados\end{tabular}}} &                        & \textbf{\textless20} & \textbf{20-50} & \textbf{\textgreater50} \\ \cline{2-5}
+                                                                                                              & \textbf{1}             & Baixa                & Baixa          & Média                   \\ \cline{2-5}
+                                                                                                              & \textbf{2-5}           & Média                & Média          & Alta                    \\ \cline{2-5}
+                                                                                                              & \textbf{\textgreater5} & Média                & Alta           & Alta                    \\ \hline
+\end{tabular}
+\end{table}
 
+\begin{table}[H]
+\centering
+\caption{Determinar Valor de Funções de Dados}
+\label{pontuacaofuncoesdedados}
+\begin{tabular}{|l|l|l|l|}
+\hline
+                                                                                        & \textbf{Baixa} & \textbf{Média} & \textbf{Alta} \\ \hline
+\textbf{\begin{tabular}[c]{@{}l@{}}Arquivos Lógicos \\ Internos (ALI)\end{tabular}}     & 7PF            & 10PF           & 15PF          \\ \hline
+\textbf{\begin{tabular}[c]{@{}l@{}}Arquivos de Interface \\ Externa (AIE)\end{tabular}} & 5PF            & 7PF            & 10PF          \\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[H]
+\centering
+\caption{Determinar Complexidade de Funções de Transação(EE - Entrada Externa)}
+\label{funcoesdetransacao}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+                              & \multicolumn{4}{c|}{\textbf{DER - Dados Elementares Referenciados}}                    \\ \hline
+\multirow{4}{*}{\textbf{ALR}} & \textbf{}              & \textbf{\textless5} & \textbf{5-15} & \textbf{\textgreater15} \\ \cline{2-5}
+                              & \textbf{\textless2}    & Baixa               & Baixa         & Média                   \\ \cline{2-5}
+                              & \textbf{2}             & Baixa               & Média         & Alta                    \\ \cline{2-5}
+                              & \textbf{\textgreater2} & Média               & Alta          & Alta                    \\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[H]
+\centering
+\caption{Determinar Complexidade de Funções de Transação(SE - Saída Externa  e CE - Consulta Externa)}
+\label{funcoesdetransacao2}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+                              & \multicolumn{4}{c|}{\textbf{DER - Dados Elementares Referenciados}}                    \\ \hline
+\multirow{4}{*}{\textbf{ALR}} & \textbf{}              & \textbf{\textless6} & \textbf{6-19} & \textbf{\textgreater19} \\ \cline{2-5}
+                              & \textbf{\textless2}    & Baixa               & Baixa         & Média                   \\ \cline{2-5}
+                              & \textbf{2-3}           & Baixa               & Média         & Alta                    \\ \cline{2-5}
+                              & \textbf{\textgreater3} & Média               & Alta          & Alta                    \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Determinar Valor de Funções de Transação}
+\label{my-label}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{}                                              & \multicolumn{1}{l|}{\textbf{Baixa}} & \multicolumn{1}{l|}{\textbf{Média}} & \multicolumn{1}{l|}{\textbf{Alta}} \\ \hline
+\textbf{Entradas Externas (EE)}                        & 3PF                                 & 4PF                                 & 6PF                                \\ \hline
+\multicolumn{1}{|c|}{\textbf{Consultas Externas (CE)}} & 3PF                                 & 4PF                                 & 6PF                                \\ \hline
+\textbf{Saídas Externas (SE)}                          & 4PF                                 & 5PF                                 & 7PF                                \\ \hline
+\end{tabular}
+\end{table}
 
 
 
