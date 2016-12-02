@@ -15,7 +15,7 @@ Neste trabalho apenas nos aprofundaremos na metodologia XP. Seus fundamentos e p
 
 \section{O que é o XP}
 
-Segundo Kent Beck, \cite{Beck:2004} \textit{Extreme Programming} é sobre mudança social. é sobre deixar ir embora nossos velhos hábitos e manias que antes faziam parte de uma adaptação forçada, mas que hoje em dia deixam de ser adaptação, para ser aquilo que define como fazer o nosso trabalho da melhor forma possível. É sobre abrir mão das defesas que nos protegem, mas interferem em nossa produtividade.
+Segundo Kent Beck, \cite{Beck:2004} \textit{Extreme Programming} é sobre mudança social. É sobre deixar ir embora nossos velhos hábitos e manias que antes faziam parte de uma adaptação forçada, mas que hoje em dia deixam de ser adaptação, para ser aquilo que define como fazer o nosso trabalho da melhor forma possível. É sobre abrir mão das defesas que nos protegem, mas interferem em nossa produtividade.
 
 \textit{Extreme Programming} é um estilo de desenvolvimento de software focado na excelência na aplicação de técnicas de programação, comunicação clara e trabalho em equipe. O XP também pode ser descrito como uma filosofia de desenvolvimento de software baseada em valores, sendo eles: comunicação, feedback, simplicidade, coragem e respeito. \cite{Beck:1999}
 
@@ -46,7 +46,6 @@ O conjunto de práticas do XP tem a finalidade de aumentar a produtividade enqua
 Podemos descrever um número enorme de práticas neste trabalho, entretanto o foco será apenas descrever as práticas mais utilizadas pelo mercado e aquelas que, de alguma forma, agreguem valor à construção de uma metodologia de desenvolvimento baseada no XP.
 
 \cite{Maurer:2002} descrevem de forma sucinta as práticas mais utilizadas pelo mercado e mais importantes dentro de um ciclo de desenvolvimento de software:
-
 
 \begin{itemize}
 
@@ -281,7 +280,33 @@ As tabelas abaixo descrevem a pontuação de funções de dados e funções de t
 \end{tabular}
 \end{table}
 
+As tabelas contemplam o processo de contagem, tanto contando funções de dados ou funções de transação. A próxima seção trará um exemplo de contagem para que alguns conceitos fiquem mais claros ao leitor.
 
+\section{Exemplo de Contagem}
+
+Para exemplificarmos uma contagem em pontos de função, podemos pensar em um cenário de software para controle de agenda telefônica. Este software é composto por três \textit{features principais:}
+
+\begin{itemize}
+	\item Incluir Contato;
+	\item Listar Contato;
+	\item Relatório de Contatos
+\end{itemize}
+
+O primeiro passo é fazer a contagem das funções de dados. Devemos determinar quais são os arquivos, ou grupos de dados utilizados pela aplicação, determinar sua complexidade e valor. Neste exemplo temos apenas um Arquivo Lógico Interno(ALI), este seria o contato. Um grupo de dados para o mesmo, ou um Registro Lógico de Dados(RLR) Também seria o contato. Os atributos, ou Dados Elementares Referenciados(DER) seriam os campos presentes no cadastro de um contato. Para este exemplo utilizaremos o nome, telefone residencial, telefone comercial, celular e categoria, resultando um total de 5 DER. Consultando a tabela da seção anterior, podemos perceber que a complexidade desta função de dados é baixa.
+
+O segundo passo é contar as funções de transação. Assim como no processo anterior, devemos determinar os arquivos e os grupos de dados referenciados pelos mesmos. Em todas as transações, apenas um arquivo lógico é referenciado(ALR). Podemos classificar três transações neste contexto:
+
+\begin{enumerate}
+	\item \textbf{Incluir Contato:} Esta transação se caracteriza como uma entrada externa(EE), já que o usuário insere dados na aplicação. Neste caso são referenciados 7 dados elementares. Além dos citados na função de dados, ocorre o acréscimo dos dois botões presentes no formulário de cadastro.
+
+	\item \textbf{Lista de Contatos:} Esta transação se caracteriza como uma consulta externa(CE), mostrando dados dos contatos para o usuário. São referenciados 5 dados elementares, o mesmos presentes na função de dados.
+
+	\item \textbf{Relatório de Contatos:} Esta transação se caracteriza como uma saída externa (SE), pois envia dados para fora da fronteira da aplicação, neste caso um PDF com os dados é gerado. Também referenciamos os mesmos 5 dados elementares presentes na função de dados.
+\end{enumerate}
+
+Consultando as tabelas presente na seção anterior, podemos definir a complexidade de todas estas funções como baixas. Agora basta somar a pontuação obtida e somara as funções de dados e as funções de transação para o tamanho total em pontos de função. Nesta exemplo teremos a seguinte soma:
+
+\centerline{PF = 7 + 3 + 3 + 4 = 17}
 
 \section{Problemas com o Ponto de Função}
 
