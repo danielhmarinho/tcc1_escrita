@@ -240,7 +240,7 @@ As tabelas abaixo descrevem a pontuação de funções de dados e funções de t
 
 \begin{table}[H]
 \centering
-\caption{Determinar Complexidade de Funções de Transação(EE - Entrada Externa)}
+\caption[Determinar Complexidade de Funções de Transação - EE]{Determinar Complexidade de Funções de Transação(EE - Entrada Externa)}
 \label{funcoesdetransacao}
 \begin{tabular}{|c|c|c|c|c|}
 \hline
@@ -255,7 +255,7 @@ As tabelas abaixo descrevem a pontuação de funções de dados e funções de t
 
 \begin{table}[H]
 \centering
-\caption{Determinar Complexidade de Funções de Transação(SE - Saída Externa  e CE - Consulta Externa)}
+\caption[Determinar Complexidade de Funções de Transação - SE, CE]{Determinar Complexidade de Funções de Transação(SE - Saída Externa  e CE - Consulta Externa)}
 \label{funcoesdetransacao2}
 \begin{tabular}{|c|c|c|c|c|}
 \hline
@@ -289,7 +289,7 @@ Para exemplificarmos uma contagem em pontos de função, podemos pensar em um ce
 \begin{itemize}
 	\item Incluir Contato;
 	\item Listar Contato;
-	\item Relatório de Contatos
+	\item Relatório de Contatos.
 \end{itemize}
 
 O primeiro passo é fazer a contagem das funções de dados. Devemos determinar quais são os arquivos, ou grupos de dados utilizados pela aplicação, determinar sua complexidade e valor. Neste exemplo temos apenas um Arquivo Lógico Interno(ALI), este seria o contato. Um grupo de dados para o mesmo, ou um Registro Lógico de Dados(RLR) Também seria o contato. Os atributos, ou Dados Elementares Referenciados(DER) seriam os campos presentes no cadastro de um contato. Para este exemplo utilizaremos o nome, telefone residencial, telefone comercial, celular e categoria, resultando um total de 5 DER. Consultando a tabela da seção anterior, podemos perceber que a complexidade desta função de dados é baixa.
@@ -304,7 +304,7 @@ O segundo passo é contar as funções de transação. Assim como no processo an
 	\item \textbf{Relatório de Contatos:} Esta transação se caracteriza como uma saída externa (SE), pois envia dados para fora da fronteira da aplicação, neste caso um PDF com os dados é gerado. Também referenciamos os mesmos 5 dados elementares presentes na função de dados.
 \end{enumerate}
 
-Consultando as tabelas presente na seção anterior, podemos definir a complexidade de todas estas funções como baixas. Agora basta somar a pontuação obtida e somara as funções de dados e as funções de transação para o tamanho total em pontos de função. Nesta exemplo teremos a seguinte soma:
+Consultando as tabelas presente na seção anterior, podemos definir a complexidade de todas estas funções como baixas. Agora basta somar a pontuação obtida e somar as funções de dados e as funções de transação para obter o tamanho total em pontos de função. Nesta exemplo teremos a seguinte soma:
 
 \centerline{PF = 7 + 3 + 3 + 4 = 17}
 
@@ -312,7 +312,7 @@ Consultando as tabelas presente na seção anterior, podemos definir a complexid
 
 Apesar da eficiência da contagem de pontos de função, ao longo dos anos estudos foram feitos a fim de descobrir problemas, lacunas do processo e possíveis melhorias para o mesmo. Buscando saber quais seriam esses problemas e alternativas para solucionar essas lacunas, em 2015 três autores brasileiros realizaram um processo de revisão sistemática na literatura para agrupar as observações feitas por outros autores na área.
 
-Os autores classificaram os problemas encontrados em três tipos: Peso e complexidade, independência de tecnologia e ajuste da pontuação. As principais críticas a parte de peso e complexidade da contagem de pontos de função diz respeito a mesma classificação em complexidade de duas funções de transação ou de dados com diferentes quantidades de campos e referências a arquivos. Outra crítica seria o espaçamento entre as complexidades. Alguns autores acreditam que definir apenas como baixa, média e alta pode ser muito e alto e acabar não detalhando de forma mais aproximada a real complexidade de desenvolvimento de uma funcionalidade. \cite{Marcos:2015}
+Os autores classificaram os problemas encontrados em três tipos: Peso e complexidade, independência de tecnologia e ajuste da pontuação. As principais críticas a parte de peso e complexidade da contagem de pontos de função dizem respeito a mesma classificação em complexidade de duas funções de transação ou de dados com diferentes quantidades de campos e referências a arquivos. Outra crítica seria o espaçamento entre as complexidades. Alguns autores acreditam que definir apenas como baixa, média e alta pode ser muito e alto e acabar não detalhando de forma mais aproximada a real complexidade de desenvolvimento de uma funcionalidade. \cite{Marcos:2015}
 
 Problemas relacionados a independência de tecnologia também são citados na revisão sistemática feita pelos autores. O principal questionamento dos pesquisadores é a falta de adaptação do processo de contagem às novas linguagens de programação. A abordagem não reflete o atual desenvolvimento de software, principalmente o advento e crescimento da orientação a objetos. A independência de tecnologias também diz respeito ao hardware, muito diferente hoje do que a existente a 20 anos atrás. \cite{Marcos:2015}
 
@@ -320,6 +320,6 @@ Por fim, o estudo relata problemas como ajuste do ponto de função. Alguns auto
 
 \section{Utilização de Pontos de Função}
 
-Mesmo com os problemas e lacunas descobertos ao longo dos anos, a indústria de desenvolvimento de software continuam usando a contagem de pontos de função para a estimativa de tamanho de software. Na visão de Ebert \cite{Ebert:2014}, as companhias passaram a adotar esse modelo de estimativa com algumas finalidades. A primeira delas seria alocar melhor os recursos a partir de uma primeira estimativa de prazo e esforço necessário para a produção. Outro fator seria a estimativa de esforço quando alguma mudança nos requisitos do projeto ocorresse. Além disso também seria possível medir a produtividade e taxas de entrega de software, possibilitando benchmarks  e análises de pontos de melhoria no processo de desenvolvimento.
+Mesmo com os problemas e lacunas descobertos ao longo dos anos, a indústria de desenvolvimento de software continua usando a contagem de pontos de função para a estimativa de tamanho de software. Na visão de Ebert \cite{Ebert:2014}, as companhias passaram a adotar esse modelo de estimativa com algumas finalidades. A primeira delas seria alocar melhor os recursos a partir de uma primeira estimativa de prazo e esforço necessário para a produção. Outro fator seria a estimativa de esforço quando alguma mudança nos requisitos do projeto ocorresse. Além disso também seria possível medir a produtividade e taxas de entrega de software, possibilitando benchmarks  e análises de pontos de melhoria no processo de desenvolvimento.
 
 A utilização dos pontos de função para estimativas de projeto passou a ser usada também por órgãos de governo e não só por companhias ou fábricas de desenvolvimento de software. O Roteiro de Métricas de Software(2016) do SISP cita essa utilização do processo em órgãos e em empresas privadas, além dos benefícios obtidos por ambos pela utilização dos mesmo:  “Diversas instituições públicas e privadas têm utilizado a métrica Ponto de Função(PF) nas estimativas e dimensionamento de tamanho funcional de projetos de software devido aos diversos benefícios de utilização desta métrica, destacando-se: regras de contagem objetivas, independência da solução tecnológica utilizada e facilidade de estimativa nas fases iniciais do ciclo de vida do software.” \cite{SISP:2016}

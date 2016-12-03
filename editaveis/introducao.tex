@@ -10,9 +10,9 @@ A Análise de Pontos de Função, proposta para medir as funcionalidades de um s
 
 Como a medição é feita sobre as funcionalidades, seu tamanho permanece o mesmo independente de tecnologias ou linguagens de programação. A medição pode ser feita no início do projeto, fazendo seu uso oportuno para o planejamento do design e do desenvolvimento do projeto. \cite{Kusumoto:2002}
 
-A aplicação manual da medição de tamanho funcional é exaustiva e pode consumir muito tempo dar organizações que possuem um grande número de projetos. Em geral as organizações têm de lidar com vários projetos em um curto espaço de tempo, o que dificulta a estimativa de esforço e acaba gerando a perda de um dos benefícios gerados por tais estimativas. \cite{Ebert:2014}
+A aplicação manual da medição de tamanho funcional é exaustiva e pode consumir muito tempo das organizações que possuem um grande número de projetos. Em geral as organizações têm de lidar com vários projetos em um curto espaço de tempo, o que dificulta a estimativa de esforço e acaba gerando a perda de um dos benefícios gerados por tais estimativas. \cite{Ebert:2014}
 
-Em casos onde os um grande número de requisitos é analisado, e muitos desses são considerados complexos, uma análise especializada é necessária. Recentemente tecnologias e ferramentas têm emergido para automatizar e facilitar a medição de tamanho funcional. \cite{Ebert:2014}
+Em casos onde um grande número de requisitos é analisado, e muitos desses são considerados complexos, uma análise especializada é necessária. Recentemente tecnologias e ferramentas têm emergido para automatizar e facilitar a medição de tamanho funcional. \cite{Ebert:2014}
 
 Neste contexto de ferramentas podemos destacar o de software livre, este que tem gerado um engajamento de comunidades e uma maior participação popular no últimos anos. \cite{Eilola:2002} \nocite{Anota:2016} ``Software livre''  refere-se à liberdade que os usuários têm de executar, copiar, distribuir, estudar e modificar o software de acordo com suas necessidades. Isso significa que o usuário tem acesso ao código fonte do software, além de cópias de suas versões e variações da mesma. \cite{Stallman:2003}{\textit{``Assim sendo, Software livre é uma questão de liberdade, não de preço. Para entender o conceito, pense em `liberdade de expressão', não em `cerveja grátis'.''}} \cite{Stallman:2003}
 
@@ -24,11 +24,11 @@ Visando o desenvolvimento de um software livre, que atenda as necessidades dos �
 
 \section{Descrição do Problema}
 
-Várias ferramentas disponíveis no mercado se propõe e tratar da medição de tamanho funcional de software. Entretanto, os órgãos do governo federal tem utilizado basicamente planilhas para armazenar e controlar os dados das medições, informação confirmada em reunião com a Secretaria de Tecnologia da Informação(STI), a qual prepara uma portaria recomendando aos órgãos a adoção de ferramentas.
+Várias ferramentas disponíveis no mercado se propõe a tratar da medição de tamanho funcional de software. Entretanto, os órgãos do governo federal tem utilizado basicamente planilhas para armazenar e controlar os dados das medições, informação confirmada em reunião com a Secretaria de Tecnologia da Informação(STI), a qual prepara uma portaria recomendando aos órgãos a adoção de ferramentas.
 
 O problema do uso de planilhas para gerenciar as medições é a dificuldade no controle das informações, a falta de uniformidade e consistência dos dados, o que impossibilita a criação de baselines. Ainda de acordo com o STI, um dos principais fatores que levam os órgãos a não adotarem ferramentas é a usabilidade ruim, sendo mais fácil para os servidores digitar os dados em planilhas.
 
-A tabela \ref{ferramentas} representa os atributos avaliados durante um estudo de ferramentas realizado durante o presente trabalho.
+A tabela \ref{ferramentas} representa os atributos avaliados em um estudo de ferramentas realizado durante o presente trabalho.
 
 \begin{table}[ht]
 \centering
@@ -72,15 +72,15 @@ A tabela \ref{ferramentas} representa os atributos avaliados durante um estudo d
 
 Uma análise de ferramentas presentes no mercado, mostrou a escassez de ferramentas livres. Outra observação a ser feita é a de que nenhuma ferramenta atende as necessidades atuais dos órgãos públicos brasileiros, seja por lacunas em seus requisitos funcionais, ou em seus requisitos não funcionais.
 
-O apêndice  deste trabalho traz informações mais detalhadas acerca da análise das ferramentas e fatores observados para a caracterização das mesmas.
+A tabela \ref{ferramentas2} apresenta de forma resumida os conjuntos de funcionalidades disponíveis nas ferramentas investigadas. Observa-se que poucas atendem a grande maioria das necessidades atuais do órgãos.
 
-Portanto, este trabalho tem como objetivo o desenvolvimento de uma ferramenta livre, para realizar a contagem de pontos de função e o armazenamento de um histórico das mesma, com a STI como pilar de apoio para a obtenção e validação dos requisitos da presente ferramenta.
+O apêndice 'A' deste trabalho traz informações mais detalhadas acerca da análise das ferramentas e fatores observados para a caracterização das mesmas.
+
 
 \section{Objetivos}
 
-O objetivo deste  trabalho é desenvolver uma ferramenta para contagem e
-armazenamento de pontos de função, em parceria com a STI, que se adeque ao
-contexto dos órgãos públicos brasileiros e suas necessidades.
+O objetivo deste trabalho é desenvolver uma ferramenta livre para contagem e
+armazenamento de pontos de função, que se adeque ao contexto dos órgãos públicos brasileiros e suas necessidades, com a STI como pilar de apoio para a obtenção e validação dos requisitos da presente ferramenta.
 
 Também foram definidos os seguintes objetivos específicos:
 
@@ -110,16 +110,13 @@ introdutório, que disserta sobre o contexto, a descrição do problema, os
 objetivos do trabalho, e a organização do mesmo.
 
 O capítulo 2 apresenta os conceitos relativos ao Extreme Programming, suas
-pŕaticas e as diferenças de sua aplicação em um contexto onde apenas um
+práticas e as diferenças de sua aplicação em um contexto onde apenas um
 programador desenvolve um projeto inteiro.
 
-O capítulo 3 aborda os conceitos relativos ao Ponto de Função, além de sua história, método de contagem, desvantagens em sua utilização e por fim  a
-importância do mesmo na indústria de desenvolvimento de software.
+O capítulo 3 aborda os conceitos relativos ao Ponto de Função, além de sua história, um exemplo de contagem, problemas relacioandos com sua utilização, e por fim  a importância do mesmo na indústria de desenvolvimento de software.
 
 O capítulo 4 descreve a metodologia empregada neste trabalho, ou seja,
 o processo de desenvolvimento de software adaptado ao contexto de um
 desenvolvedor, baseando-se nas práticas e conceitos do Extreme Programming.
 
-O último capítulo apresenta os resultados obtidos até o momento, escolha de
-ferramentas e opções tecnológicas para o desenvolvimento da segunda parte deste
-trabalho.
+O último capítulo apresenta a proposta de desenvolvimento da ferramenta e os resultados obtidos até o momento, escolha de ferramentas e opções tecnológicas para o desenvolvimento da segunda parte deste trabalho.
