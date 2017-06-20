@@ -1,0 +1,63 @@
+\part{Execução}
+
+\chapter[Execução]{Execução}
+
+Este capítulo trata do relato das atividades definidas na primeira parte deste trabalho, além do detalhamento acerca das \textit{sprints} executadas durante o período.
+
+\section{Execução de Sprints}
+
+A execução da segunda parte deste trabalho se baseou na metodologia de desenvolvimento definida no capítulo de metodologia. As sprints tiveram duração definida de 15 dias, onde dentro de cada um desses períodos curtos de desenvolvimento, uma parte do software seria disponibilizada para validação e homologação pela STI. Como a parceria com a mesma não ocorreu da forma esperada, esta parte de validação coube ao próprio desenvolvedor do código. A seção de considerações abordará mais a fundo alguns destes problemas.
+
+As sprints foram organizadas como milestones dentro dos respectivos repositórios de trabalho, seja na parte de front-end com React, ou na parte de backend da API usando Ruby on Rails. As tarefas foram definidas como \textit{issues} dentro do repositório, tendo como estados de feito, em andamento, urgente e concluídas.
+
+Em todas elas a metodologia de desenvolvimento foi seguida a partir das necessidades de desenvolvimento. Quando havia desenvolvimento de front-end algumas partes como testes e validação não foram executadas devido às adaptações feitas durante a segunda parte do trabalho.
+
+Seguem abaixo as descrições detalhadas de cada \textit{sprint}, seu período de execução, as \textit{issues} trabalhadas durante a mesma e algumas observações acerca da \textit{sprint}.
+
+\subsection{Sprint 1 20/03 - 03/04}
+
+A primeira \textit{sprint} do projeto foi dedicada a criação de alguns CRUDS essenciais para o funcionamento da aplicação: usuários e organizações. Estes dois estão ligados ao gerenciamento de projeto e ao controle de perfis de usuário. A configuração de uma integração contínua também foi feita como atividade do projeto.
+
+A issue de criação de usuários não foi concluída, pois alguns detalhes relacionados ao \textit{token} de autenticação ainda não haviam sido definidos. Como ficou definido na metodologia aplicada, essa issue seria considerada dívida técnica e seria adicionada a próxima \textit{sprint} para a conclusão da mesma. Abaixo a lista de \textit{issues} e seu status durante a \textit{sprint}:
+
+\begin{itemize}
+  \item CRUD Usuário - Dívida Técnica (API)
+  \item Integração contínua - Concluída (GCS)
+  \item CRUD Organizações - Concluída (API)
+\end{itemize}
+
+\subsection{Sprint 2 - 03/04 - 17/04}
+
+O foco da \textit{sprint} foi a criação do CRUD de projetos, base para a construção das contagens e a relação das mesmas. A continuação do CRUD de usuarios, que foi deixado como dívida técnica da \textit{sprint} anterior, além da criação da parte de login e de projetos no front-end, gerando telas e rotas para a aplicação cliente.
+
+Novamente a issue de usuários foi deixada como dívida técnica, já que a forma de login em aplicações deste tipo não poderia ser feita via sessão ou \textit{cookies}, por isso um estudo mais aprofundado acerca de autenticação via tokens seria necessário para a próxima \textit{sprint} de desenvolvimento. A lista de \textit{issues} da \textit{sprint} e sua situação está listada abaixo:
+
+\begin{itemize}
+  \item CRUD Usuário - Dívida Técnica(API)
+  \item CRUD Projetos - Concluída(API)
+  \item Interface de projetos - Concluída(FRONT)
+  \item Interface login - Concluída(FRONT)
+\end{itemize}
+
+\subsection{Sprint 3 - 17/04 - 01/05}
+
+A terceira \textit{sprint} teve como \textit{issues} a criação do CRUD de contagem, gerando uma estrutura básica com pontuação e controle de histórico das mesmas. Também foi desenvolvida a autenticação via \textit{token}. Após alguns estudos a solução adotada foi a utilização de \textit{JWT(Json Web Token)} para a autenticação de usuários e assim a dívida técnica gerada na primeira \textit{sprint} do projeto foi finalmente solucionada.
+
+Abaixo a listagem das \textit{issues} e seus estados ao final da \textit{sprint}:
+
+\begin{itemize}
+  \item CRUD Usuário - Concluída(API)
+  \item CRUD Contagem - Concluída(API)
+  \item Autenticação JWT - Concluída(API)
+\end{itemize}
+
+\subsection{Sprint 4 - 01/05 - 15/05}
+
+A quarta \textit{sprint} do projeto teve como objetivo finalizar a estrutura básica de contagem dentro da API, adicionando assim as entidades de funções de dados e funções de transação, base para obter o resultado das contagens de cada projeto.
+
+Nesta \textit{sprint} começou a se notar um excesso de trabalho necessário para integrar coisas minúsculas da API a interface front-end, além da falta de respostas da STI após alguns e-mails. Com o risco enorme da não conclusão do trabalho se a abordagem fosse mantida, era necessário trocar a abordagem de servidor-cliente com tarefas muito bem definidas, para um processamento em conjunto de ambos. A seção de considerações dará mais detalhes sobre esta mudança. Abaixo a lista de issues desenvolvidas na \textit{sprint}:
+
+\begin{itemize}
+  \item CRUD Funções de Dados - Concluída(API)
+  \item CRUD Funções de transação - Concluída(API)
+\end{itemize}
