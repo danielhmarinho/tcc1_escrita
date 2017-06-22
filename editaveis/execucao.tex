@@ -1,8 +1,34 @@
-\part{Execução}
-
 \chapter[Execução]{Execução}
 
 Este capítulo trata do relato das atividades definidas na primeira parte deste trabalho, além do detalhamento acerca das \textit{sprints} executadas durante o período.
+
+\section{Backlog do Produto}
+
+Para o início do desenvolvimento do projeto um backlog foi criado com histórias e suas devidas pontuações. Para a pontuação das mesmas foi selecionada uma história, neste caso a mais simples em questão de complexidade, para ser o parâmetro para todas as outras.
+
+Um CRUD foi selecionado como história mais simples e a ele foi atribuído 3 pontos de complexidade. A tabela abaixo descreve as histórias, que no caso do repositório foram atribuídas à issues, e suas devidas pontuações.
+
+\begin{table}[h]
+\centering
+\label{backlog}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{História}                 & \textbf{Pontuação} \\ \hline
+CRUD Organizações                 & 3                  \\ \hline
+CRUD Projetos                     & 3                  \\ \hline
+CRUD Usuário                      & 5                  \\ \hline
+CRUD Funções de Dados             & 8                  \\ \hline
+CRUD Funções de Transação         & 13                 \\ \hline
+Integração contínua               & 3                  \\ \hline
+Perfis de Usuário                 & 5                  \\ \hline
+Gráficos de evolução de contagens & 8                  \\ \hline
+Criação de Baselines              & 13                 \\ \hline
+Histórico de contagens            & 3                  \\ \hline
+Custo de projetos                 & 5                  \\ \hline
+Login de Usuário                  & 5                  \\ \hline
+\end{tabular}
+\caption{Pontuações do backlog}
+\end{table}
 
 \section{Execução de Sprints}
 
@@ -12,9 +38,11 @@ As sprints foram organizadas como milestones dentro dos respectivos repositório
 
 Em todas elas a metodologia de desenvolvimento foi seguida a partir das necessidades de desenvolvimento. Quando havia desenvolvimento de front-end algumas partes como testes e validação não foram executadas devido às adaptações feitas durante a segunda parte do trabalho.
 
+Vale ressaltar a adaptação feita a atividade de coleta de métricas. Devido a falta de tempo para a refatoração de código e melhoria de parâmetros, observou-se que a necessidade de coleta de métricas não era necessária ao final de toda a sprint. Optou-se por uma coleta ao final da penúltima sprint, para que na última sprint algumas refatorações fossem feitas, caso houvesse tempo para tal.
+
 Seguem abaixo as descrições detalhadas de cada \textit{sprint}, seu período de execução, as \textit{issues} trabalhadas durante a mesma e algumas observações acerca da \textit{sprint}.
 
-\subsection{Sprint 1 20/03 - 03/04}
+\subsection{Sprint 1 (20/03 - 03/04)}
 
 A primeira \textit{sprint} do projeto foi dedicada a criação de alguns CRUDS essenciais para o funcionamento da aplicação: usuários e organizações. Estes dois estão ligados ao gerenciamento de projeto e ao controle de perfis de usuário. A configuração de uma integração contínua também foi feita como atividade do projeto.
 
@@ -26,7 +54,7 @@ A issue de criação de usuários não foi concluída, pois alguns detalhes rela
   \item CRUD Organizações - Concluída (API)
 \end{itemize}
 
-\subsection{Sprint 2 - 03/04 - 17/04}
+\subsection{Sprint 2 (03/04 - 17/04)}
 
 O foco da \textit{sprint} foi a criação do CRUD de projetos, base para a construção das contagens e a relação das mesmas. A continuação do CRUD de usuarios, que foi deixado como dívida técnica da \textit{sprint} anterior, além da criação da parte de login e de projetos no front-end, gerando telas e rotas para a aplicação cliente.
 
@@ -39,7 +67,7 @@ Novamente a issue de usuários foi deixada como dívida técnica, já que a form
   \item Interface login - Concluída(FRONT)
 \end{itemize}
 
-\subsection{Sprint 3 - 17/04 - 01/05}
+\subsection{Sprint 3 (17/04 - 01/05)}
 
 A terceira \textit{sprint} teve como \textit{issues} a criação do CRUD de contagem, gerando uma estrutura básica com pontuação e controle de histórico das mesmas. Também foi desenvolvida a autenticação via \textit{token}. Após alguns estudos a solução adotada foi a utilização de \textit{JWT(Json Web Token)} para a autenticação de usuários e assim a dívida técnica gerada na primeira \textit{sprint} do projeto foi finalmente solucionada.
 
@@ -51,7 +79,7 @@ Abaixo a listagem das \textit{issues} e seus estados ao final da \textit{sprint}
   \item Autenticação JWT - Concluída(API)
 \end{itemize}
 
-\subsection{Sprint 4 - 01/05 - 15/05}
+\subsection{Sprint 4 (01/05 - 15/05)}
 
 A quarta \textit{sprint} do projeto teve como objetivo finalizar a estrutura básica de contagem dentro da API, adicionando assim as entidades de funções de dados e funções de transação, base para obter o resultado das contagens de cada projeto.
 
@@ -60,4 +88,44 @@ Nesta \textit{sprint} começou a se notar um excesso de trabalho necessário par
 \begin{itemize}
   \item CRUD Funções de Dados - Concluída(API)
   \item CRUD Funções de transação - Concluída(API)
+\end{itemize}
+
+\subsection{Sprint 5 (15/05 - 29/05)}
+
+A quinta \textit{sprint} foi o ponto de partida para a construção de uma abordagem diferente ao projeto. Apesar de parecer que o trabalho anterior foi jogado fora, a lógica por trás da API poderia ser aplicada a uma aplicação web, apenas modificando as formas de interação entre cliente e servidor.
+
+A \textit{sprint} teve como objetivos a replicação da estrutura de CRUDS com retornos diferentes de json, além da criação do login utilizando sessão. Também foi feita toda a gerência de configuração de software do projeto, como integração contínua e coleta de métricas.
+
+Segue a lista com issues desenvolvidas durante a \textit{sprint}:
+
+\begin{itemize}
+  \item Login devise - Concluída
+  \item Replicação de todos os CRUDS da API - Dívida técnica
+  \item Gerência de configuração de software - Concluída
+\end{itemize}
+
+\subsection{Sprint 6 (29/05 - 12/06)}
+
+A penúltima \textit{sprint} do projeto foi direcionada para a criação dos perfis de usuário, as views para a criação de projetos além da exibição de uma lista com os mesmos. Uma view para  lista de contagens também foi adicionada, além da conclusão da dívida técnica da \textit{sprint} anterior. Ao final da \textit{sprint}, foi adicionada uma issue para a criação de gráficos de evolução de contagens de desenvolvimento.
+
+Abaixo a lista de issues desenvolvidas durante a \textit{sprint}, assim como seu status final:
+
+\begin{itemize}
+  \item Perfis de usuário - Concluída
+  \item Replicação de todos os CRUDS da API - Concluída
+  \item Views de projeto e lista de contagens - Concluída
+  \item Gráfico de evolução de contagens - Concluída
+\end{itemize}
+
+\subsection{Sprint 7 (12/06 - 26/06)}
+
+A última sprint do projeto teve como objetivo a disponibilização de uma release estável do projeto, com o fechamento das funcionalidades descritas no escopo, além da disponibilização do software em produção. As últimas funcionalidades a serem desenvolvidas foram o cálculo do custo do projeto, a criação de baselines e a adaptação da view de criação de contagens para a estrutura de tabela.
+
+Nesta sprint  também foram coletadas métricas de código para análise final da qualidade do projeto. Abaixo a lista de issues desenvolvidas durante a última sprint do projeto:
+
+\begin{itemize}
+  \item Adaptação da view de criação de contagens
+  \item Criação de Baselines
+  \item Coleta de métricas de código fonte
+  \item Cálculo de custo de ponto de função
 \end{itemize}

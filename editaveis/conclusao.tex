@@ -1,0 +1,37 @@
+\chapter[Conclusão]{Conclusão}
+
+Este capítulo dissertará sobre as dificuldades encontradas durante o desenvolvimento deste trabalho, a relação de parceria com a STI, além das possibilidades de trabalhos futuros. Também abordará a falta de estímulo para a disponibilização de software no Portal do Software Público(SPB) e uma conclusão sobre os objetivos alcançados ao final deste trabalho.
+
+\section{Relação com a STI}
+
+No início do desenvolvimento deste trabalho, a STI mostrou interesse em colaborar com a validação de requisitos e derivação dos mesmos. Durante toda a primeira parte, a comunicação e interesse entre as duas partes apoiaram a evolução dos requisitos e escopo de desenvolvimento da ferramenta.
+
+Após o período de férias da universidade, e a saída de uma das servidoras que apoiava a comunicação entre as duas partes do projeto, a STI passou a não responder mais e-mails e demonstrou total desinteresse na continuidade da parceria.
+
+O desinteresse implicou em muitas mudanças de escopo e abordagem de desenvolvimento. Algumas escolhas tecnológicas, e principalmente algumas funcionalidades priorizadas para o sistema, passaram por decisão e entendimento das necessidades da STI e dos órgãos públicos brasileiros.
+
+O direcionamento da aplicação, antes designado aos órgãos públicos, passou a ter caráter mais genérico, além das priorização e validação dos requisitos passarem a serem feitas pelo desenvolvedor.
+
+\section{Dificuldades encontradas}
+
+Como foi citado na seção anterior, a falta de comunicação com a STI gerou problemas no desenvolvimento da aplicação. Sem a priorização de requisitos e a validação dos mesmo, o desenvolvimento da aplicação se perdeu. Não se tinha direcionamento em delimitar um escopo ou definir por onde começar.
+
+A ideia inicial era desenvolver uma ferramenta com front-end e back-end completamente desacoplados. A necessidade desta abordagem se devia ao desenvolvimento de um front-end responsivo, renderizando objetos de forma independente do servidor. Por todos esses motivos, o framework Javascript React foi escolhido para o desenvolvimento da aplicação.
+
+Sem o apoio da STI, a necessidade da utilização deste framework e abordagem passou a não existir, o que gerou uma mudança de abordagem a partir da quinta sprint. Mudar de abordagem e ferramentas durante o desenvolvimento de um trabalho, pode acarretar em mudança de escopo e mudança de atividades.
+
+Com a retirada do React e a criação de uma nova aplicação Ruby on Rails com views acopladas ao servidor, causou um enorme retrabalho, já que a API já estava desenvolvida.
+
+Refazer os métodos para uma nova aplicação foi a maior dificuldade do projeto. Foram quase duas sprints inteiras para readaptar a aplicação e a partir daí iniciar o desenvolvimento de novas funcionalidades.
+
+\section{Disponibilização no Portal do Software Público}
+
+A disponibilização do trabalho seria feita através do Portal do Software Público(SPB), mas durante o desenvolvimento alguns fatores foram observados e mudaram o direcionamento em relação a disponibilização.
+
+A intenção da disponibilização no portal era o grande acesso e a ampla colaboração da comunidade em torno do software. Hoje o SPB parece fazer o contrário. Ao invés de auxiliar na colaboração, o repositório fechado do Gitlab tem afastado os desenvolvedores dos projetos. Vários \textit{forks} de repositórios são feitos e a funcionalidade de integração da comunidade acaba se perdendo.
+
+Outro fator impeditivo é a burocracia de disponibilização no portal. O processo de avaliação passa por várias etapas e exige do desenvolvedor muitos requisitos para deixar disponível o software à comunidade.
+
+Uma solução adotada seria a disponibilização de um pacote Debian, ou o empacotamento em formato de \textit{gem} para a linguagem \textit{ruby}.
+
+\section{Trabalhos futuros}
