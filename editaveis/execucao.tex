@@ -1,6 +1,6 @@
 \chapter[Execução]{Execução}
 
-Este capítulo trata do relato das atividades definidas na primeira parte deste trabalho, além do detalhamento acerca das \textit{sprints} executadas durante o período.
+Este capítulo trata do relato das atividades definidas na primeira parte deste trabalho, além do detalhamento acerca das \textit{sprints} executadas durante o período. Também descreve algumas dificuldades que afetaram os desenvolvimentos das sprints e o escopo do trabalho.
 
 \section{Backlog do Produto}
 
@@ -26,6 +26,7 @@ Criação de Baselines              & 13                 \\ \hline
 Histórico de contagens            & 3                  \\ \hline
 Custo de projetos                 & 5                  \\ \hline
 Login de Usuário                  & 5                  \\ \hline
+Relatório PDF                     & 5                  \\ \hline
 \end{tabular}
 \caption{Pontuações do backlog}
 \end{table}
@@ -129,3 +130,30 @@ Nesta sprint  também foram coletadas métricas de código para análise final d
   \item Coleta de métricas de código fonte
   \item Cálculo de custo de ponto de função
 \end{itemize}
+
+
+\section{Considerações}
+
+Esta seção descreve algumas considerações acerca de problemas que afetaram a execução das sprints e alteraram o planejamento das mesmas.
+
+\subsection{Relação com a STI}
+
+No início do desenvolvimento deste trabalho, a STI mostrou interesse em colaborar com a validação de requisitos e derivação dos mesmos. Durante toda a primeira parte, a comunicação e interesse entre as duas partes apoiaram a evolução dos requisitos e escopo de desenvolvimento da ferramenta.
+
+Após o período de férias da universidade, e a saída de uma das servidoras que apoiava a comunicação entre as duas partes do projeto, a STI passou a não responder mais e-mails e demonstrou total desinteresse na continuidade da parceria.
+
+O desinteresse implicou em muitas mudanças de escopo e abordagem de desenvolvimento. Algumas escolhas tecnológicas, e principalmente algumas funcionalidades priorizadas para o sistema, passaram por decisão e entendimento das necessidades da STI e dos órgãos públicos brasileiros.
+
+O direcionamento da aplicação, antes designado aos órgãos públicos, passou a ter caráter mais genérico, além das priorização e validação dos requisitos passarem a serem feitas pelo desenvolvedor.
+
+\subsection{Dificuldades encontradas}
+
+Como foi citado na seção anterior, a falta de comunicação com a STI gerou problemas no desenvolvimento da aplicação. Sem a priorização de requisitos e a validação dos mesmo, o desenvolvimento da aplicação se perdeu. Não se tinha direcionamento em delimitar um escopo ou definir por onde começar.
+
+A ideia inicial era desenvolver uma ferramenta com front-end e back-end completamente desacoplados. A necessidade desta abordagem se devia ao desenvolvimento de um front-end responsivo, renderizando objetos de forma independente do servidor. Por todos esses motivos, o framework Javascript React foi escolhido para o desenvolvimento da aplicação.
+
+Sem o apoio da STI, a necessidade da utilização deste framework e abordagem passou a não existir, o que gerou uma mudança a partir da quinta sprint. Mudar de abordagem e ferramentas durante o desenvolvimento de um trabalho, pode acarretar em mudança de escopo e mudança de atividades.
+
+Com a retirada do React e a criação de uma nova aplicação Ruby on Rails com views acopladas ao servidor, causou um retrabalho, já que a API já estava desenvolvida. Apesar deste problema, a criação de uma API possibilitou que com contribuições futuras, outros desenvolvedores possam criar uma interface em qualquer tecnologia para a utilização da aplicação.
+
+Refazer os métodos para uma nova aplicação foi a maior dificuldade do projeto. Foram quase duas sprints inteiras para readaptar a aplicação e a partir daí iniciar o desenvolvimento de novas funcionalidades.

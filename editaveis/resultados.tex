@@ -1,6 +1,7 @@
-\chapter[Aplicação Web]{Aplicação Web}
+\chapter[Resultados]{Resultados}
 
-Este capítulo tem como finalidade apresentar a ferramenta a ser desenvolvida e abordar os resultados obtidos até o momento. Serão discutidos tópicos como local do repositório, ferramentas escolhidas para o desenvolvimento e justificativas para a escolha das mesmas. Também serão abordados os requisitos obtidos para o desenvolvimento da aplicação.
+Este capítulo mostrará os resultados obtidos durante a execução deste trabalho, os requisitos finalizados, métricas de código obtidas e algumas telas da aplicação desenvolvida.
+
 
 \section{Requisitos}
 
@@ -75,73 +76,126 @@ Requisitos não-funcionais também foram obtidos a partir desta reunião:
 
 \section{Definição de Ferramentas}
 
-Esta seção apresenta uma explicação sucinta de cada ferramenta utilizada para o desenvolvimento do projeto, assim como, quando necessário, o motivo de suas escolhas. A figura \ref{fig11} ilustra todas as ferramentas a serem utilizadas no presente trabalho.
+Esta seção apresenta uma explicação sucinta de cada ferramenta utilizada para o desenvolvimento do projeto, assim como, quando necessário, o motivo de suas escolhas. A figura \ref{fig18} ilustra todas as ferramentas a serem utilizadas no presente trabalho.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[keepaspectratio=true,scale=0.8, width=\textwidth]{figuras/fig11.eps}
+	\includegraphics[keepaspectratio=true,scale=0.3]{figuras/fig18.eps}
 	\caption{Ferramentas Escolhidas para o Desevolvimento}
-	\label{fig11}
+	\label{fig18}
 \end{figure}
 
 \begin{itemize}
 
-  \item \textbf{Ruby on Rails:} \textit{Framework} de desenvolvimento de aplicações web por meio da linguagem de programação Ruby. Sua arquitetura se baseia em MVC (\textit{Model, View e Controller}) e será utilizada em modo API(\textit{Application Programming Interface}), ou seja, será construída para que forneça um serviço a outra aplicação. Os dados serão disponibilizados via JSON(\textit{JavaScript Object Notation}). A criação de uma API se deve ao fato de que um dos requisitos não funcionais da aplicação é o grande fluxo de dados. Separar o \textit{back-end} da aplicação e o \textit{front-end} melhora o desempenho da aplicação, além de facilitar a manutenção da mesma.
-
-  \item \textbf{React:} Segundo sua própria documentação \cite{React:2014}, o React é um \textit{framework} Javascript desenvolvido para criação de interfaces interativas. A utilização de Javascript se deve ao fato da renderização de componentes ser feita a partir da diferenciação entre estados, ou seja, só serão renderizados novamente componentes cujo seus dados foram alterados. Esta aplicação consumirá os dados providos pela API através de requisições AJAX(\textit{Asynchronous Javascript and XML}), sendo responsável também pela geração de \textit{views} para interação do cliente com o servidor.
-
-  \item \textbf{Travis:} Ferramenta para integração contínua de código. Quando um \textit{commit} for integrado ao repositório da aplicação, a ferramenta criará uma máquina virtual, com configurações pré determinadas pelo desenvolvedor, para execução de testes unitários e de integração. Caso a \textit{build} falhe, o Travis impede que o \textit{commit} ou \textit{merge} seja integrado a \textit{branch}. Caso a \textit{build} passe, é possível configurar a ferramenta para \textit{deploy} automático em sites como Heroku.
+  \item \textbf{Ruby on Rails:} \textit{Framework} de desenvolvimento de aplicações web por meio da linguagem de programação Ruby. Sua arquitetura se baseia em MVC (\textit{Model, View e Controller}) e será utilizada em modo API(\textit{Application Programming Interface}), ou seja, será construída para que forneça um serviço a outra aplicação. Os dados serão disponibilizados via JSON(\textit{JavaScript Object Notation}). A criação de uma API se deve ao fato de que um dos requisitos não funcionais da aplicação é o grande fluxo de dados. O framework também será utilizado para o desenvolvimento de uma aplicação \textit{fullstack}.
 
   \item \textbf{Gitlab:} Provê controle de versão, revisão de código, \textit{tracking} de \textit{issues} além de espaço para a criação de uma wiki do projeto.
 
   \item \textbf{PostgresSQL:} Sistema gerenciador de banco de dados objeto relacional de código aberto.
 
-  \item \textbf{Code Climate:} Ferramenta para análise estática de código fonte, além de métricas como duplicação de código e complexidade ciclomática. Possui integração com o repositório do aplicação. Caso algum merge entre branchs diminua a qualidade do código, o Code Climate previne o merge entre as duas branchs.
+  \item \textbf{RubyCritic:} Ferramenta para análise estática de código fonte, além de métricas como duplicação de código e complexidade ciclomática. Possui integração com o repositório do aplicação.
+
+	\item \textbf{Gitlab CI:} Ferramenta para integração contínua de código. Quando um \textit{commit} for integrado ao repositório da aplicação, a ferramenta criará uma máquina virtual, com configurações pré determinadas pelo desenvolvedor, para execução de testes unitários e de integração. Caso a \textit{build} falhe, o Gitlab CI impede que o \textit{commit} ou \textit{merge} seja integrado a \textit{branch}.
+
+	\item \textbf{SimpleCov:} SimpleCov é uma ferramenta de análise de cobertura de testes. A partir dela poderá ser obtida uma análise da cobertura de código fonte.
 
 \end{itemize}
 
-\section{Repositório}
+\section{Status Final de Desenvolvimento}
 
-No desenvolvimento deste trabalho serão utilizados dois repositórios. Um repositório fará o controle de versão da API desenvolvida através do \textit{framework} 'Ruby on Rails', enquanto o outro repositório fará o controle de versão do 'React', framework Javascript  para a construção de interfaces a partir de componentes.
+Ao final do desenvolvimento das \textit{sprints}, uma aplicação estável foi desenvolvida a partir do backlog delimitado no início do projeto. Algumas funcionalidades tiveram sua implementação concluída, outras tiveram implementação parcial e algumas não foram implementadas. O escopo inicial do trabalho era grande e algumas dificuldades impediram a conclusão de todas as histórias propostas. Um detalhamento maior dessas questões será tratado no capítulo de conclusão.
 
-Os repositórios podem ser encontrados nos seguintes links:
+Abaixo as histórias descritas no backlog e seu status final de desenvolvimento:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|}
+\hline
+\textbf{História}                 & \textbf{Status}                     \\ \hline
+CRUD Organizações                 & Finalizado                          \\ \hline
+CRUD Projetos                     & Finalizado                          \\ \hline
+CRUD Usuário                      & Finalizado                          \\ \hline
+CRUD Funções de Dados             & Finalizado                          \\ \hline
+CRUD Funções de Transação         & Finalizado                          \\ \hline
+Integração contínua               & Finalizado                          \\ \hline
+Perfis de Usuário                 & Parcialmente                        \\ \hline
+Gráficos de evolução de contagens & Finalizado                          \\ \hline
+Criação de Baselines              & Parcialmente                        \\ \hline
+Histórico de contagens            & Finalizado                          \\ \hline
+Custo de projetos                 & Parcilamente                        \\ \hline
+Login de Usuário                  & Finalizado                           \\ \hline
+Relatório                         & \multicolumn{1}{l|}{Não finalizado} \\ \hline
+\end{tabular}
+\caption{Status final do desenvolvimento da aplicação}
+\label{status}
+\end{table}
+
+\section{Visão de Produto}
+
+O resultado do desenvolvimento deste trabalho é um software para contagem de pontos de função. Abaixo uma descrição ao nível de funcionalidades da aplicação:
 
 \begin{itemize}
+\item Gerenciamento de contagem de pontos de função, criação, edição e remoção de contagens;
+\item Histórico de contagens e visualização detalhada de cada uma das mesmas;
+\item Visão geral de um projeto e as contagens associadas ao mesmo;
+\item Controle de acesso de usuários via login;
+\item Perfis de usuário para diferentes acessos, onde só certos de tipos de usuário tem permissão para alteração de contagens;
+\item Cálculo de custos de projeto a partir do valor de ponto de função definido em cada contagem;
+\item Gráfico de evolução de contagens de desenvolvimento;
+\item Definição de uma contagem como baseline do projeto;
+\end{itemize}
 
-\item \textbf{Ruby on Rails:}
-https://gitlab.com/danielhmarinho/function-points-api
+\subsection{API}
 
-\item \textbf{React:} https://gitlab.com/danielhmarinho/react-interface
+Além da aplicação também foi desenvolvida uma API para a mesma. A partir da API outros desenvolvedores poderão colaborar desenvolvendo um front-end desacoplado para a aplicação, apenas consumindo os dados da API.
+
+
+\section{Métricas de Código}
+
+Para a coleta de métricas de código do projeto foi usada a ferramenta Rubycritic. O objeto da mesma é dar uma nota a aplicação com base em algumas métricas de código coletadas. A nota se baseia em três métricas conhecidas pela comunidade Ruby:
+
+\begin{itemize}
+  \item \textbf{Reek:} Esta métrica analisa Code Smells no código fonte. Smells são indicadores de onde o código pode estar difícil de se manter, evoluir ou simplesmente ser lido. Alguns destes indicadores são: tamanho de classe, variáveis não utilizadas, iteradores aninhados entre muitas outras. Uma descrição mais profunda dos indicadores pode ser encontrada em \url{https://github.com/troessner/reek/blob/master/docs/Code-Smells.md}
+
+  \item \textbf{Flay:} Métrica que analisa duplicações de código. A forma de análise não se baseia em duplicações puras, mas na estrutura do código. Variáveis, nome de classes e métodos e espaços em branco são ignorados neste caso.
+
+  \item \textbf{Flog:} Esta métrica analisa a complexidade ABC do código. Esta complexidade analisa definição de variáveis, fluxo de execuções e chamadas de métodos, atribuindo uma pontuação. Quanto maior a pontuação dada, maior é a complexidade do código e maior será o esforço para testá-lo.
 
 \end{itemize}
 
-\section{Cronograma}
+A figura abaixo mostra a análise feita pela ferramenta e a nota atribuída ao projeto:
 
-O cronograma de execução de atividades definido para este trabalho pode ser visto na tabela \ref{cronograma}.
+\begin{figure}[]
+	\centering
+	\includegraphics[keepaspectratio=true,scale=0.3]{figuras/fig12.eps}
+	\caption{Análise de Código}
+	\label{fig12}
+\end{figure}
 
-\begin{table}[]
-\centering
-\caption{Cronograma de Atividades do Trabalho}
-\label{cronograma}
-\resizebox{\textwidth}{!} {
-\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|}
-\hline
-\textbf{Atividades}                                                             & \textbf{AGO}             & \textbf{SET}             & \textbf{OUT}                                    & \textbf{NOV}             & \textbf{DEZ}             & \textbf{JAN}             & \textbf{FEV}             & \textbf{MAR}             & \textbf{ABR}             & \textbf{MAI}             & \textbf{JUN}             & \textbf{JUL}             \\ \hline
-Definição do Trabalho                                                           & \cellcolor[HTML]{009901} &                          &                                                 &                          &                          &                          &                          &                          &                          &                          &                          &                          \\ \hline
-Referencial Teórico: XP                                                         &                          & \cellcolor[HTML]{009901} & \cellcolor[HTML]{009901}                        &                          &                          &                          &                          &                          &                          &                          &                          &                          \\ \hline
-Referencial Teórico: PF                                                         &                          &                          & \cellcolor[HTML]{009901}                        & {\color[HTML]{009901} }  &                          &                          &                          &                          &                          &                          &                          &                          \\ \hline
-Desenvolvimento do Contexto                                                     &                          &                          & \cellcolor[HTML]{009901}                        & \cellcolor[HTML]{009901} &                          &                          &                          &                          &                          &                          &                          &                          \\ \hline
-Construção da metodologia                                                       &                          &                          & \cellcolor[HTML]{009901}                        &                          &                          &                          &                          &                          &                          &                          &                          &                          \\ \hline
-Entender necessidades                                                           &                          & \cellcolor[HTML]{FFFFFF} & \cellcolor[HTML]{009901}                        & \cellcolor[HTML]{009901} & \cellcolor[HTML]{009901} &                          &                          &                          &                          &                          &                          &                          \\ \hline
-Seleção de Ferramentas                                                          &                          &                          & \cellcolor[HTML]{009901}{\color[HTML]{009901} } & \cellcolor[HTML]{009901} &                          &                          &                          &                          &                          &                          &                          &                          \\ \hline
-Validação de requistos                                                          &                          &                          &                                                 &                          & \cellcolor[HTML]{009901} &                          &                          &                          &                          &                          &                          &                          \\ \hline
-\textbf{Entrega TCC 1}                                                          &                          &                          &                                                 &                          & \cellcolor[HTML]{009901} &                          &                          &                          &                          &                          &                          &                          \\ \hline
-\begin{tabular}[c]{@{}l@{}}Desenvolvimento Primeira \\ Release\end{tabular}     &                          &                          &                                                 &                          &                          & \cellcolor[HTML]{009901} & \cellcolor[HTML]{009901} &                          &                          &                          &                          &                          \\ \hline
-\begin{tabular}[c]{@{}l@{}}Desenvolvimento Segunda \\ Release\end{tabular}      &                          &                          &                                                 &                          &                          &                          &                          & \cellcolor[HTML]{009901} & \cellcolor[HTML]{009901} &                          &                          &                          \\ \hline
-\begin{tabular}[c]{@{}l@{}}Desenvolvimento Terceira\\  Release\end{tabular}     &                          &                          &                                                 &                          &                          &                          &                          &                          &                          & \cellcolor[HTML]{009901} & \cellcolor[HTML]{009901} &                          \\ \hline
-Revisão do Texto                                                                &                          &                          &                                                 &                          &                          &                          &                          &                          &                          &                          & \cellcolor[HTML]{009901} & \cellcolor[HTML]{009901} \\ \hline
-\begin{tabular}[c]{@{}l@{}}Validação e priorização\\ de requisitos\end{tabular} &                          &                          &                                                 &                          &                          &                          & \cellcolor[HTML]{009901} &                          & \cellcolor[HTML]{009901} &                          & \cellcolor[HTML]{009901} &                          \\ \hline
-\textbf{Entrega TCC 2}                                                          &                          &                          &                                                 &                          &                          &                          &                          &                          &                          &                          &                          & \cellcolor[HTML]{009901} \\ \hline
-\end{tabular}
-}
-\end{table}
+A nota atribuída a aplicação foi de 70 pontos. Uma boa nota se observamos o curto período de desenvolvimento e o pouco tempo para refatoração de código. O principal problema apontado foi a complexidade de algumas controladores, como a de funções de transação e a de projetos.
+
+\section{Cobertura de Código}
+
+A cobertura de código foi analisada pela gem \textit{Simplecov}. Em resumo, a ferramenta analisa todos os testes criados e quantas linhas relevantes de código foram cobertas pelos testes escritos.
+
+A figura abaixo apresenta o \textit{report} dado pela ferramenta:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[keepaspectratio=true,scale=0.3]{figuras/fig13.eps}
+	\caption{Cobertura de Código}
+	\label{fig13}
+\end{figure}
+
+A cobertura de código chegou a 75\%. Os métodos de contagem das modelos e controladores foram responsáveis pela queda de cobertura. Ainda continua sendo um bom valor para  o resultado final do projeto.
+
+\section{Repositórios}
+
+Abaixo os links para os dois repositórios utilizados neste trabalho, o primeiro sendo da API e o segundo da aplicação web:
+
+\begin{itemize}
+  \item \url{https://gitlab.com/danielhmarinho/function-points-api}
+	\item \url{https://gitlab.com/danielhmarinho/function-points-web}
+\end{itemize}
+
+O primeiro repositório armazena a API, a partir dele novas implementações de interface poderão ser feitas. O segundo repositório diz respeito a aplicação \textit{fullstack}, ela será executada apenas na parte do servidor.

@@ -1,30 +1,8 @@
 \chapter[Conclusão]{Conclusão}
 
-Este capítulo dissertará sobre as dificuldades encontradas durante o desenvolvimento deste trabalho, a relação de parceria com a STI, além das possibilidades de trabalhos futuros. Também abordará a falta de estímulo para a disponibilização de software no Portal do Software Público(SPB) e uma conclusão sobre os objetivos alcançados ao final deste trabalho.
+O resultado do trabalho foi satisfatório. A mudança de abordagem na quinta sprint e algumas dificuldades já citadas neste capítulo, impediram um melhor desenvolvimento do trabalho e a conclusão de uma forma mais completa. Se a abordagem fosse a mesma desde o início da implementação do software, com certeza o resultado final seria mais satisfatório que o atual.
 
-\section{Relação com a STI}
-
-No início do desenvolvimento deste trabalho, a STI mostrou interesse em colaborar com a validação de requisitos e derivação dos mesmos. Durante toda a primeira parte, a comunicação e interesse entre as duas partes apoiaram a evolução dos requisitos e escopo de desenvolvimento da ferramenta.
-
-Após o período de férias da universidade, e a saída de uma das servidoras que apoiava a comunicação entre as duas partes do projeto, a STI passou a não responder mais e-mails e demonstrou total desinteresse na continuidade da parceria.
-
-O desinteresse implicou em muitas mudanças de escopo e abordagem de desenvolvimento. Algumas escolhas tecnológicas, e principalmente algumas funcionalidades priorizadas para o sistema, passaram por decisão e entendimento das necessidades da STI e dos órgãos públicos brasileiros.
-
-O direcionamento da aplicação, antes designado aos órgãos públicos, passou a ter caráter mais genérico, além das priorização e validação dos requisitos passarem a serem feitas pelo desenvolvedor.
-
-\section{Dificuldades encontradas}
-
-Como foi citado na seção anterior, a falta de comunicação com a STI gerou problemas no desenvolvimento da aplicação. Sem a priorização de requisitos e a validação dos mesmo, o desenvolvimento da aplicação se perdeu. Não se tinha direcionamento em delimitar um escopo ou definir por onde começar.
-
-A ideia inicial era desenvolver uma ferramenta com front-end e back-end completamente desacoplados. A necessidade desta abordagem se devia ao desenvolvimento de um front-end responsivo, renderizando objetos de forma independente do servidor. Por todos esses motivos, o framework Javascript React foi escolhido para o desenvolvimento da aplicação.
-
-Sem o apoio da STI, a necessidade da utilização deste framework e abordagem passou a não existir, o que gerou uma mudança de abordagem a partir da quinta sprint. Mudar de abordagem e ferramentas durante o desenvolvimento de um trabalho, pode acarretar em mudança de escopo e mudança de atividades.
-
-Com a retirada do React e a criação de uma nova aplicação Ruby on Rails com views acopladas ao servidor, causou um enorme retrabalho, já que a API já estava desenvolvida.
-
-Refazer os métodos para uma nova aplicação foi a maior dificuldade do projeto. Foram quase duas sprints inteiras para readaptar a aplicação e a partir daí iniciar o desenvolvimento de novas funcionalidades.
-
-\section{Disponibilização no Portal do Software Público}
+Algumas boas práticas de desenvolvimento e organização de trabalho foram deixadas de lado por alguns momentos para que o resultado final de um software mais completo fosse alcançado. Algumas práticas de clean code e refatoração poderiam gerar um trabalho a mais para a organização de trechos de código que separados não agregariam ao resultado final do trabalho. Com um foco maior na entrega de produto, foi possível gerar uma versão mais completa do software.
 
 A disponibilização do trabalho seria feita através do Portal do Software Público(SPB), mas durante o desenvolvimento alguns fatores foram observados e mudaram o direcionamento em relação a disponibilização.
 
@@ -34,4 +12,12 @@ Outro fator impeditivo é a burocracia de disponibilização no portal. O proces
 
 Uma solução adotada seria a disponibilização de um pacote Debian, ou o empacotamento em formato de \textit{gem} para a linguagem \textit{ruby}.
 
-\section{Trabalhos futuros}
+Ao final deste trabalho, ficou perceptível que ainda existem inúmeras contribuições a serem feitas a este trabalho. A primeira delas seria finalizar a manipulação de baselines, fundamentais para a estrutura do software.
+
+Outra contribuição possível seria a refatoração de módulos e a melhoria da cobertura de código. A qualidade do código tende a ser deixada de lado com a chegada de prazos de entrega. Com a ausência de prazos e uma maior flexibilidade para se focar em qualidade e refatorações, a qualidade final de código poderia subir bastante. Isso também corrobora com a contribuição da comunidade em torno do repositório.
+
+Após a entrega deste trabalho, a ideia é que se continue a contribuir com a aplicação desenvolvendo novas funcionalidades, estas que não foram implementadas durante este ciclo de desenvolvimento, e futuras que surgirão de novas necessidades de usuários.
+
+Outra colaboração possível seriam pesquisas relacionadas a como engajar a comunidade de software livre em torno de um projeto, sem que o mesmo tenha que estar no Portal do Software Público.
+
+No fim vale ressaltar todo aprendizado obtido, além da superação de várias dificuldades encontradas ao longo do caminho. Houve um erro ao delimitar um escopo muito grande na primeira parte do trabalho, porém uma grande parte deste escopo pode ser entregue ao final.

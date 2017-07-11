@@ -1,25 +1,27 @@
-\chapter[Extreme Programming]{Extreme Programming}
+\chapter[Referencial Teórico]{Referencial Teórico}
 
 Este capítulo fará uma abordagem a metodologia chamada \textit{Extreme Programming}. Serão tratadas suas características, benefícios de sua utilização além dos pilares que definem a metodologia: seus valores, princípios e práticas.
 Também abordará um contexto diferente ao desenvolvimento de software por meio de um time, quando o desenvolvedor trabalha sozinho em um projeto.
 
+Tambpem descreve as apsctos da conagem de tamanho funcional, como o surgimento da contagem e a técnica de contagem de pontos de função (IFPUG) pelo manual do CPM.
+
 \section{Metodologias ágeis}
 
-As abordagem de desenvolvimento de software vem mudando drasticamente na última década. Existem várias desvantagens acerca das metodologias tradicionais e bem documentadas, consideradas muito “pesadas” para algumas abordagens. Em resposta a essas abordagens, um novo grupo de metodologias têm aparecido nos últimos anos. Estas metodologias são as conhecidas como metodologias ágeis. \cite{Agarwal:2008}
+As abordagem de desenvolvimento de software vem mudando drasticamente na última década. Existem várias desvantagens acerca das metodologias tradicionais e bem documentadas, consideradas muito “pesadas” para algumas abordagens. Em resposta a essas abordagens, um novo grupo de metodologias têm aparecido nos últimos anos. Estas metodologias são as conhecidas como metodologias ágeis \cite{Agarwal:2008}.
 
-As metodologias ágeis envolvem menos documentação e são mais focadas no código fonte do produto. Elas são mais adaptativas do que as consideradas “tradicionais”. Muitas metodologias hoje caminham para o lado ágil. Todas possuem características similares, mas também diferenças significativas. Entre as várias metodologias ágeis dos dias de hoje, podemos destacar o XP(\textit{Extreme Programming}), \textit{Scrum} e o \textit{Crystal.} \cite{Agarwal:2008}
+As metodologias ágeis envolvem menos documentação e são mais focadas no código fonte do produto. Elas são mais adaptativas do que as consideradas “tradicionais”. Muitas metodologias hoje caminham para o lado ágil. Todas possuem características similares, mas também diferenças significativas. Entre as várias metodologias ágeis dos dias de hoje, podemos destacar o XP(\textit{Extreme Programming}), \textit{Scrum} e o \textit{Crystal.} \cite{Agarwal:2008}.
 
 Neste trabalho apenas nos aprofundaremos na metodologia XP. Seus fundamentos e princípios serão a base para a construção da metodologia e da definição do processo de desenvolvimento de software descritos no próximo capítulo deste trabalho.
 
-\section{O que é o XP}
+\subsection{O que é o XP}
 
 Segundo Kent Beck, \cite{Beck:2004} \textit{Extreme Programming} é sobre mudança social. É sobre deixar ir embora nossos velhos hábitos e manias que antes faziam parte de uma adaptação forçada, mas que hoje em dia deixam de ser adaptação, para ser aquilo que define como fazer o nosso trabalho da melhor forma possível. É sobre abrir mão das defesas que nos protegem, mas interferem em nossa produtividade.
 
-\textit{Extreme Programming} é um estilo de desenvolvimento de software focado na excelência na aplicação de técnicas de programação, comunicação clara e trabalho em equipe. O XP também pode ser descrito como uma filosofia de desenvolvimento de software baseada em valores, sendo eles: comunicação, feedback, simplicidade, coragem e respeito. \cite{Beck:1999}
+\textit{Extreme Programming} é um estilo de desenvolvimento de software focado na excelência na aplicação de técnicas de programação, comunicação clara e trabalho em equipe. O XP também pode ser descrito como uma filosofia de desenvolvimento de software baseada em valores, sendo eles: comunicação, feedback, simplicidade, coragem e respeito \cite{Beck:1999}.
 
-Além dos valores, a filosofia de desenvolvimento do XP também possui princípios e suas práticas. Os princípios fundamentais são o foco no aspecto humano e social do desenvolvimento de software, na qualidade do software e na busca do benefício mútuo  de desenvolvedores e clientes de um projeto.\cite{Beck:2004}
+Além dos valores, a filosofia de desenvolvimento do XP também possui princípios e suas práticas. Os princípios fundamentais são o foco no aspecto humano e social do desenvolvimento de software, na qualidade do software e na busca do benefício mútuo  de desenvolvedores e clientes de um projeto \cite{Beck:2004}.
 
-O \textit{Extreme Programming} nada mais é do que uma junção harmoniosa destas três vertentes. Kent Beck descreve em seu livro uma ponte, que representa os três elos presentes no XP. A figura abaixo representa a ponte descrita por Kent, nela podemos ver o hiato entre os valores e as práticas presentes no XP,  estes são os princípios presentes na metodologia.\cite{Beck:2004}
+O \textit{Extreme Programming} nada mais é do que uma junção harmoniosa destas três vertentes. Kent Beck descreve em seu livro uma ponte, que representa os três elos presentes no XP. A figura abaixo representa a ponte descrita por Kent, nela podemos ver o hiato entre os valores e as práticas presentes no XP,  estes são os princípios presentes na metodologia \cite{Beck:2004}.
 
 \begin{figure}[h]
 	\centering
@@ -30,9 +32,9 @@ O \textit{Extreme Programming} nada mais é do que uma junção harmoniosa desta
 
 A seguir serão descritas características gerais das práticas propostas pela metodologia, fundamentais para o entendimento do ciclo de desenvolvimento do XP.
 
-\section{Práticas}
+\subsection{Práticas}
 
-O conjunto de práticas do XP tem a finalidade de aumentar a produtividade enquanto mantém a qualidade do produto. \cite{Maurer:2002} As práticas são o último elo que compõe a ponte descrita por Kent Beck. A sustentação e travessia da mesma depende de todos os elementos que a compõe. A figura \ref{fig02} mostra um detalhamento das práticas presentes no XP.
+O conjunto de práticas do XP tem a finalidade de aumentar a produtividade enquanto mantém a qualidade do produto \cite{Maurer:2002}. As práticas são o último elo que compõe a ponte descrita por Kent Beck. A sustentação e travessia da mesma depende de todos os elementos que a compõe. A figura \ref{fig02} mostra um detalhamento das práticas presentes no XP.
 
 \begin{figure}[ht]
 	\centering
@@ -57,7 +59,7 @@ Podemos descrever um número enorme de práticas neste trabalho, entretanto o fo
 
 	\item \textbf{Projeto Simples:} O XP não prevê esforço no desenvolvimento de uma solução robusta para um problema. Resolver os problemas de hoje, evitando redundâncias, com o menor número de classes e métodos possíveis é o objetivo do desenvolvedor. Códigos com um design simples facilitam a manutenção sem a necessidade de documentação extensa. Isso evita predições erradas sobre o produto, além do gasto de recursos para refatoração.
 
-	\item \textbf{Refatoração:} A refatoração pode ser considerada como qualquer mudança que melhore a manutenibilidade e o entendimento do código fonte, mas não alterando a funcionalidade do mesmo. \cite{Fowler:1999} A refatoração é um fator importante dentro do projeto devido ao fato da pouca documentação. O código deve ser de simples entendimento e compreensão, assim como a forma mais simples de código para que os testes escritos rodem.
+	\item \textbf{Refatoração:} A refatoração pode ser considerada como qualquer mudança que melhore a manutenibilidade e o entendimento do código fonte, mas não alterando a funcionalidade do mesmo \cite{Fowler:1999}.  A refatoração é um fator importante dentro do projeto devido ao fato da pouca documentação. O código deve ser de simples entendimento e compreensão, assim como a forma mais simples de código para que os testes escritos rodem.
 
 	\item \textbf{Programação em pares:} No XP a produção do código é feita por duas pessoas trabalhando em uma única máquina.  Uma pessoa controla  teclado e mouse, pensando na resolução do problema e se aquela abordagem funcionará para determinada situação. A segunda pessoa pensa de forma mais estratégica, avaliando se a solução aplicada é a melhor possível para desenvolver a funcionalidade proposta. As posições são trocadas constantemente durante o dia.
 
@@ -75,9 +77,9 @@ Podemos descrever um número enorme de práticas neste trabalho, entretanto o fo
 
 Após uma breve explicação das características da metodologia e um aprofundamento em suas práticas, a próxima seção descreve-rá o ciclo de trabalho proposto pelo Extreme Programming.
 
-\section{Visão de Projeto no XP}
+\subsection{Visão de Projeto no XP}
 
-O XP deixa o processo de desenvolvimento tradicional de lado. Em vez de analisar, planejar e desenvolver um design visando um futuro muito distante, o XP explora a redução de custos na mudança do software, desenvolvendo um pouco de cada uma dessas atividades durante o ciclo de desenvolvimento de software. \cite{Beck:1999} A figura \ref{fig03} ilustra o ciclo de desenvolvimento de um projeto na visão do XP.
+O XP deixa o processo de desenvolvimento tradicional de lado. Em vez de analisar, planejar e desenvolver um design visando um futuro muito distante, o XP explora a redução de custos na mudança do software, desenvolvendo um pouco de cada uma dessas atividades durante o ciclo de desenvolvimento de software \cite{Beck:1999}. A figura \ref{fig03} ilustra o ciclo de desenvolvimento de um projeto na visão do XP.
 
 \begin{figure}[h]
 	\centering
@@ -86,25 +88,25 @@ O XP deixa o processo de desenvolvimento tradicional de lado. Em vez de analisar
 	\label{fig03}
 \end{figure}
 
-O processo se inicia com o cliente priorizando as features mais significativas dentro de todas levantadas para a definição de uma release. Uma release é uma versão estável do produto com um grupo de funcionalidades implementadas. Após uma seleção das mesmas, os desenvolvedores o orientam acerca do tempo para a implementação e seus custos. \cite{Beck:1999} Essas estimativas são obtidas a partir das experiências e entendimento dos riscos pelos desenvolvedores. \cite{Bernabe:2015}
+O processo se inicia com o cliente priorizando as features mais significativas dentro de todas levantadas para a definição de uma release. Uma release é uma versão estável do produto com um grupo de funcionalidades implementadas. Após uma seleção das mesmas, os desenvolvedores o orientam acerca do tempo para a implementação e seus custos \cite{Beck:1999}. Essas estimativas são obtidas a partir das experiências e entendimento dos riscos pelos desenvolvedores \cite{Bernabe:2015}.
 
-Uma iteração se inicia com a escolha das features (chamadas de user stories no XP) mais significativas dentre as previamente selecionadas para a release, Novamente os desenvolvedores informam o custo e o tempo para o desenvolvimento e de acordo com o tempo definido para a iteração um escopo de desenvolvimento é definido. \cite{Beck:1999}
+Uma iteração se inicia com a escolha das features (chamadas de user stories no XP) mais significativas dentre as previamente selecionadas para a release, Novamente os desenvolvedores informam o custo e o tempo para o desenvolvimento e de acordo com o tempo definido para a iteração um escopo de desenvolvimento é definido \cite{Beck:1999}.
 
-Os desenvolvedores transformam as user Stories em tarefas, as quais cada um tomará responsabilidade durante o ciclo. Destas tarefas são derivados casos de testes e a aceitação  destes irão demonstrar a conclusão das tarefas ao final da iteração. \cite{Beck:1999}
+Os desenvolvedores transformam as user Stories em tarefas, as quais cada um tomará responsabilidade durante o ciclo. Destas tarefas são derivados casos de testes e a aceitação  destes irão demonstrar a conclusão das tarefas ao final da iteração \cite{Beck:1999}.
 
-As iterações acontecem até que uma pequena release seja construída. Durante este período os desenvolvedores devem fazer refatorações no código, práticas o pareamento e desenvolvedor a arquitetura da forma mais simples e manutenível possível. \cite{Beck:2004}
+As iterações acontecem até que uma pequena release seja construída. Durante este período os desenvolvedores devem fazer refatorações no código, práticas o pareamento e desenvolvedor a arquitetura da forma mais simples e manutenível possível \cite{Beck:2004}.
 
 O ciclo de desenvolvimento do XP é planejado para que um time possa desenvolver suas atividades de uma maneira eficiente e com foco na qualidade do produto. Entretanto, em alguns casos o desenvolvedor é obrigado a desenvolver um projeto sozinho, seja pelo tamanho do mesmo ou por limitações de uma equipe. Nesses casos devemos fazer adaptações a esta metodologia .
 
 A próxima seção terá um foco nas diferenças entre um ciclo de desenvolvimento para um time e na situação onde apenas um desenvolvedor é responsável por todas as etapas do processo.
 
-\section{Um desenvolvedor no papel de time}
+\subsection{Um desenvolvedor no papel de time}
 
-O XP foca em situações que envolvem times pequenos, onde o desenvolvimento é feito em pares. Muitas das práticas do XP necessitam de trabalho em equipe, algum desenvolvedor revisando o código de outro. Todo o desenvolvimento no XP, feito em pares, necessita da revisão constante de código. \cite{Ron:2000}
+O XP foca em situações que envolvem times pequenos, onde o desenvolvimento é feito em pares. Muitas das práticas do XP necessitam de trabalho em equipe, algum desenvolvedor revisando o código de outro. Todo o desenvolvimento no XP, feito em pares, necessita da revisão constante de código \cite{Ron:2000}.
 
-Existem casos onde a programação em pares é uma prática intangível, onde um único programador trabalha no projeto. Como um consultor independente, o desenvolvedor não terá um parceiro para a prática da técnica de pareamento. Em um projeto muito pequeno ou algo experimental, o pareamento pode ser um problema devido ao tamanho das tasks. \cite{Agarwal:2008}
+Existem casos onde a programação em pares é uma prática intangível, onde um único programador trabalha no projeto. Como um consultor independente, o desenvolvedor não terá um parceiro para a prática da técnica de pareamento. Em um projeto muito pequeno ou algo experimental, o pareamento pode ser um problema devido ao tamanho das tasks \cite{Agarwal:2008}.
 
-Nestes casos algumas adaptações ao processo e as práticas descritas pelo XP são necessárias. As práticas devem ser adaptadas ao desenvolvedor para que não sejam perdidos seus benefícios. O processo não deve ser tornar oneroso, a adaptação do mesmo e de suas fases se faz necessária para diminuir custos e tempo de desenvolvimento. \cite{Bernabe:2015}
+Nestes casos algumas adaptações ao processo e as práticas descritas pelo XP são necessárias. As práticas devem ser adaptadas ao desenvolvedor para que não sejam perdidos seus benefícios. O processo não deve ser tornar oneroso, a adaptação do mesmo e de suas fases se faz necessária para diminuir custos e tempo de desenvolvimento \cite{Bernabe:2015}.
 
 Em seu artigo, \cite{Bernabe:2015} propõe a adaptação do processo de desenvolvimento proposto pelo XP. A figura \ref{fig04} representa visualmente o processo descrito pelo autor:
 
@@ -115,25 +117,25 @@ Em seu artigo, \cite{Bernabe:2015} propõe a adaptação do processo de desenvol
 	\label{fig04}
 \end{figure}
 
-A primeira fase do processo se resume ao conhecimento e a motivação de desenvolver o produto. O conhecimento sobre tecnologias e avaliação de riscos futuros pode ser muito complexo para apenas um desenvolvedor. A motivação para o desenvolvimento é fundamental, já que o esforço necessário e a gestão pessoal serão grandes inicialmente. \cite{Bernabe:2015}
+A primeira fase do processo se resume ao conhecimento e a motivação de desenvolver o produto. O conhecimento sobre tecnologias e avaliação de riscos futuros pode ser muito complexo para apenas um desenvolvedor. A motivação para o desenvolvimento é fundamental, já que o esforço necessário e a gestão pessoal serão grandes inicialmente \cite{Bernabe:2015}.
 
 A definição do \textit{backlog} do produto, ou um conjunto de features que compõe todo o projeto, se mantém da mesma forma.  A única diferença é o local do armazenamento. O autor recomenda fortemente o uso de ferramentas ou “quadros” digitais. Sua portabilidade e flexibilidade se fazem mais úteis ao desenvolvedor do que quadros físicos em uma parede que muitas vezes não trarão visibilidade.
 
 A criação das \textit{user stories} se torna mais simples. O entendimento das mesmas será feito apenas por um desenvolvedor, o que evita lacunas na comunicação de como uma \textit{feature} deve ser implementada.
 
-Um dos maiores desafios em um cenário com um único desenvolvedor, é a estimativa das \textit{user stories}. Não apenas pela falta de proximidade de um cliente, mas por riscos não identificados ou deficiências técnicas que não poderão ser supridas por outros membros da equipe. Nestes casos a única recomendação é comparar as estimativas de cada tarefa a cada iteração para se obter um esforço médio na estimativa das próximas.  \cite{Bernabe:2015}
+Um dos maiores desafios em um cenário com um único desenvolvedor, é a estimativa das \textit{user stories}. Não apenas pela falta de proximidade de um cliente, mas por riscos não identificados ou deficiências técnicas que não poderão ser supridas por outros membros da equipe. Nestes casos a única recomendação é comparar as estimativas de cada tarefa a cada iteração para se obter um esforço médio na estimativa das próximas \cite{Bernabe:2015}.
 
-O planejamento das iterações devem ser feitos priorizando aspectos como duração e quantidade de tarefas a serem feitas. Para um desenvolvedor uma iteração deve durar entre uma ou duas semanas, respeitando um limite de 30 horas semanais. O XP propõe 40 horas semanais, mas desenvolvedores \textit{“freelancers”} muitas vezes trabalham em mais de um projeto semanalmente. Desenvolver uma metáfora para explicar o objetivo da iteração pode ajudar o desenvolvedor a cumprir seus objetivos de forma mais rápida. Vale ressaltar a necessidade de avaliar a experiência do desenvolvedor na hora de selecionar a quantidade de \textit{tasks} a serem executadas durante um ciclo de desenvolvimento. \cite{Bernabe:2015}
+O planejamento das iterações devem ser feitos priorizando aspectos como duração e quantidade de tarefas a serem feitas. Para um desenvolvedor uma iteração deve durar entre uma ou duas semanas, respeitando um limite de 30 horas semanais. O XP propõe 40 horas semanais, mas desenvolvedores \textit{“freelancers”} muitas vezes trabalham em mais de um projeto semanalmente. Desenvolver uma metáfora para explicar o objetivo da iteração pode ajudar o desenvolvedor a cumprir seus objetivos de forma mais rápida. Vale ressaltar a necessidade de avaliar a experiência do desenvolvedor na hora de selecionar a quantidade de \textit{tasks} a serem executadas durante um ciclo de desenvolvimento \cite{Bernabe:2015}.
 
-Na fase de desenvolvimento o desenvolvedor deve seguir as mesmas práticas e observações propostas pelo XP. A diferença desta fase é a ausência do pareamento para garantir uma maior qualidade de código. Uma solução para esse problema pode ser a técnica conhecida como \textit{Rubber Duck Debugging}. \cite{Andrew:2002} A técnica consiste em colocar um pato de borracha ao seu lado para simular um pareamento. A ideia é que explicando o problema e seu objetivo ao pato, o desenvolvedor consiga identificar o que o código não está fazendo, mas deveria.
+Na fase de desenvolvimento o desenvolvedor deve seguir as mesmas práticas e observações propostas pelo XP. A diferença desta fase é a ausência do pareamento para garantir uma maior qualidade de código. Uma solução para esse problema pode ser a técnica conhecida como \textit{Rubber Duck Debugging} \cite{Andrew:2002}. A técnica consiste em colocar um pato de borracha ao seu lado para simular um pareamento. A ideia é que explicando o problema e seu objetivo ao pato, o desenvolvedor consiga identificar o que o código não está fazendo, mas deveria.
 
-As metodologias ágeis incluem uma melhora contínua a cada final de release ou iteração. A vantagem para um único desenvolvedor é que a reavaliação em busca de melhorias pode ser feita várias vezes e sobre todos os aspectos do desenvolvimento. \cite{Bernabe:2015} A fase de revisão visa a melhoria destes aspectos e a preparação para um novo ciclo de desenvolvimento.
+As metodologias ágeis incluem uma melhora contínua a cada final de release ou iteração. A vantagem para um único desenvolvedor é que a reavaliação em busca de melhorias pode ser feita várias vezes e sobre todos os aspectos do desenvolvimento \cite{Bernabe:2015}.  A fase de revisão visa a melhoria destes aspectos e a preparação para um novo ciclo de desenvolvimento.
 
 Após a revisão das \textit{user stories} e a avaliação de sua completude, o desenvolvedor deve disponibilizar uma versão com as \textit{features} desenvolvidas naquela iteração. \textit{Pequenas releases} são práticas do XP e devem ser mantidas para o aumento de qualidade do código e valor para o cliente.
 
 Esta seção abordou a visão do XP para um desenvolvedor e algumas adaptações a serem feitas no processo de desenvolvimento de software. A próxima seção tratará especificamente das diferenças entre as práticas do XP no contexto de time e no contexto onde apenas um desenvolvedor atua.
 
-\section{Práticas para apenas um desenvolvedor}
+\subsection{Práticas para apenas um desenvolvedor}
 
 Além das adaptações ao processo de desenvolvimento mostradas na seção anterior, o contexto onde apenas um desenvolvedor desenvolve um projeto também necessita de adaptações às práticas descritas pelo XP. \cite{Agarwal:2008} buscou estabelecer uma nova metodologia denominada \textit{PXP(Personal Extreme Programming)}. Em seu artigo, o autor busca comparar as práticas em contextos onde um time atua e onde um desenvolvedor sozinho assume a responsabilidade de todo o projeto.  A tabela abaixo busca mostrar uma síntese de suas observações:
 
@@ -161,30 +163,23 @@ Além das adaptações ao processo de desenvolvimento mostradas na seção anter
 	}
 \end{table}
 
-Este capítulo abordou a metodologia conhecida como XP, suas características e práticas. Além de fazer uma comparação com uma abordagem da metodologia quando utilizada por apenas um desenvolvedor.
-
-O próximo capítulo trará uma visão geral sobre os Pontos de Função e sua utilização para medição de tamanho funcional de software.
-
-
-\chapter[Tamanho Funcional de Software]{Tamanho Funcional de Software}
-
-Este capítulo descreve o surgimento da contagem de tamanho funcional, a técnica de contagem de pontos de função (IFPUG) pelo manual do CPM.
+A próxima seção trará uma visão geral sobre os Pontos de Função e sua utilização para medição de tamanho funcional de software.
 
 \section{Tamanho Funcional de Software}
 
-A contagem de tamanho funcional de software surgiu no ano de 1979, com Albrecht. A proposta era estimar o tamanho de um software a partir das funcionalidades entregues ao usuário. Estas primeiras métricas ficaram conhecidas como \textit{Function Points(FP)} e \textit{Function Points Analysis (FPA)}. Eram uma alternativa para suprir o problema da indústria em estimar prazos e o esforço necessário para a o desenvolvimento de software. \cite{Gencel:2008}
+A contagem de tamanho funcional de software surgiu no ano de 1979, com Albrecht. A proposta era estimar o tamanho de um software a partir das funcionalidades entregues ao usuário. Estas primeiras métricas ficaram conhecidas como \textit{Function Points(FP)} e \textit{Function Points Analysis (FPA)}. Eram uma alternativa para suprir o problema da indústria em estimar prazos e o esforço necessário para a o desenvolvimento de software \cite{Gencel:2008}.
 
-Nos anos seguintes surgiram várias propostas de melhoria e variações do modelo apresentado no ano de 1979. No ano de 1986 a International Function Point User Group (IFPUG) foi criada como uma organização sem fins lucrativos. Sua função era, entre algumas outras, a de promover e disseminar o gerenciamento de projetos através do uso de FPA. Em 1996 a International Organization for Standardization (ISO), estabeleceu princípios de comum entendimento e uma interpretação consistente das  definições que permeiam a medição de tamanho funcional. \cite{Gencel:2008}
+Nos anos seguintes surgiram várias propostas de melhoria e variações do modelo apresentado no ano de 1979. No ano de 1986 a International Function Point User Group (IFPUG) foi criada como uma organização sem fins lucrativos. Sua função era, entre algumas outras, a de promover e disseminar o gerenciamento de projetos através do uso de FPA. Em 1996 a International Organization for Standardization (ISO), estabeleceu princípios de comum entendimento e uma interpretação consistente das  definições que permeiam a medição de tamanho funcional \cite{Gencel:2008}.
 
-Atualmente a ISO/IEC 20926:2010 regulamenta a análise de pontos de função. Ela define regras e etapas para aplicação da mesma em projetos de desenvolvimento e manutenção de software. \cite{Marcos:2015}
+Atualmente a ISO/IEC 20926:2010 regulamenta a análise de pontos de função. Ela define regras e etapas para aplicação da mesma em projetos de desenvolvimento e manutenção de software \cite{Marcos:2015}.
 
-\section{Contagem de Pontos de Função}
+\subsection{Contagem de Pontos de Função}
 
 O manual de contagem do IFPUG descreve o procedimento de contagem de pontos de função a partir de alguns passos: \cite{IFPUG:2010}
 
 \begin{itemize}
 
-	\item Definir as fronteiras de medição, o escopo e o propósito da mesma. A fronteira de um software pode ser definida estabelecendo uma fronteira lógica entre o software a ser medido, seus usuários e a interação com outros softwares. Essa fronteira pode ser subjetiva, consequentemente tornando difícil a delimitação do início de um software e do término de outro. \cite{Marcos:2015}
+	\item Definir as fronteiras de medição, o escopo e o propósito da mesma. A fronteira de um software pode ser definida estabelecendo uma fronteira lógica entre o software a ser medido, seus usuários e a interação com outros softwares. Essa fronteira pode ser subjetiva, consequentemente tornando difícil a delimitação do início de um software e do término de outro \cite{Marcos:2015}.
 
 	\item Medir as funções de dados. Uma função de dados refere-se aos requisitos na visão do usuário em relação ao armazenamento e a referência de dados da aplicação. Podem ser classificadas em arquivos lógicos interno e externos.
 
@@ -280,7 +275,7 @@ As tabelas abaixo descrevem a pontuação de funções de dados e funções de t
 
 As tabelas contemplam o processo de contagem, tanto contando funções de dados ou funções de transação. A próxima seção trará um exemplo de contagem para que alguns conceitos fiquem mais claros ao leitor.
 
-\section{Exemplo de Contagem}
+\subsection{Exemplo de Contagem}
 
 Para exemplificarmos uma contagem em pontos de função, podemos pensar em um cenário de software para controle de agenda telefônica. Este software é composto por três \textit{features principais:}
 
@@ -306,18 +301,18 @@ Consultando as tabelas presente na seção anterior, podemos definir a complexid
 
 \centerline{PF = 7 + 3 + 3 + 4 = 17}
 
-\section{Problemas com o Ponto de Função}
+\subsection{Problemas com o Ponto de Função}
 
 Apesar da eficiência da contagem de pontos de função, ao longo dos anos estudos foram feitos a fim de descobrir problemas, lacunas do processo e possíveis melhorias para o mesmo. Buscando saber quais seriam esses problemas e alternativas para solucionar essas lacunas, em 2015 três autores brasileiros realizaram um processo de revisão sistemática na literatura para agrupar as observações feitas por outros autores na área.
 
-Os autores classificaram os problemas encontrados em três tipos: Peso e complexidade, independência de tecnologia e ajuste da pontuação. As principais críticas a parte de peso e complexidade da contagem de pontos de função dizem respeito a mesma classificação em complexidade de duas funções de transação ou de dados com diferentes quantidades de campos e referências a arquivos. Outra crítica seria o espaçamento entre as complexidades. Alguns autores acreditam que definir apenas como baixa, média e alta pode ser muito e alto e acabar não detalhando de forma mais aproximada a real complexidade de desenvolvimento de uma funcionalidade. \cite{Marcos:2015}
+Os autores classificaram os problemas encontrados em três tipos: Peso e complexidade, independência de tecnologia e ajuste da pontuação. As principais críticas a parte de peso e complexidade da contagem de pontos de função dizem respeito a mesma classificação em complexidade de duas funções de transação ou de dados com diferentes quantidades de campos e referências a arquivos. Outra crítica seria o espaçamento entre as complexidades. Alguns autores acreditam que definir apenas como baixa, média e alta pode ser muito e alto e acabar não detalhando de forma mais aproximada a real complexidade de desenvolvimento de uma funcionalidade \cite{Marcos:2015}.
 
-Problemas relacionados a independência de tecnologia também são citados na revisão sistemática feita pelos autores. O principal questionamento dos pesquisadores é a falta de adaptação do processo de contagem às novas linguagens de programação. A abordagem não reflete o atual desenvolvimento de software, principalmente o advento e crescimento da orientação a objetos. A independência de tecnologias também diz respeito ao hardware, muito diferente hoje do que a existente a 20 anos atrás. \cite{Marcos:2015}
+Problemas relacionados a independência de tecnologia também são citados na revisão sistemática feita pelos autores. O principal questionamento dos pesquisadores é a falta de adaptação do processo de contagem às novas linguagens de programação. A abordagem não reflete o atual desenvolvimento de software, principalmente o advento e crescimento da orientação a objetos. A independência de tecnologias também diz respeito ao hardware, muito diferente hoje do que a existente a 20 anos atrás \cite{Marcos:2015}.
 
-Por fim, o estudo relata problemas como ajuste do ponto de função. Alguns autores afirmam que o ajuste não considera  importantes requisitos não funcionais, dentre eles: usabilidade, manutenibilidade, eficiência, e portabilidade. \cite{Marcos:2015}
+Por fim, o estudo relata problemas como ajuste do ponto de função. Alguns autores afirmam que o ajuste não considera  importantes requisitos não funcionais, dentre eles: usabilidade, manutenibilidade, eficiência, e portabilidade \cite{Marcos:2015}.  Tanto é que o próprio IFPUG, na sua última versão do método de contagem de PFs coloca a utilização do fator de ajuste como algo opcional, apenas alertando seus usuários a não comparar PFs ajustados com os não ajustados.
 
-\section{Utilização de Pontos de Função}
+\subsection{Utilização de Pontos de Função}
 
 Mesmo com os problemas e lacunas descobertos ao longo dos anos, a indústria de desenvolvimento de software continua usando a contagem de pontos de função para a estimativa de tamanho de software. Na visão de Ebert \cite{Ebert:2014}, as companhias passaram a adotar esse modelo de estimativa com algumas finalidades. A primeira delas seria alocar melhor os recursos a partir de uma primeira estimativa de prazo e esforço necessário para a produção. Outro fator seria a estimativa de esforço quando alguma mudança nos requisitos do projeto ocorresse. Além disso também seria possível medir a produtividade e taxas de entrega de software, possibilitando benchmarks  e análises de pontos de melhoria no processo de desenvolvimento.
 
-A utilização dos pontos de função para estimativas de projeto passou a ser usada também por órgãos de governo e não só por companhias ou fábricas de desenvolvimento de software. O Roteiro de Métricas de Software(2016) do SISP cita essa utilização do processo em órgãos e em empresas privadas, além dos benefícios obtidos por ambos pela utilização dos mesmo:  “Diversas instituições públicas e privadas têm utilizado a métrica Ponto de Função(PF) nas estimativas e dimensionamento de tamanho funcional de projetos de software devido aos diversos benefícios de utilização desta métrica, destacando-se: regras de contagem objetivas, independência da solução tecnológica utilizada e facilidade de estimativa nas fases iniciais do ciclo de vida do software.” \cite{SISP:2016}
+A utilização dos pontos de função para estimativas de projeto passou a ser usada também por órgãos de governo e não só por companhias ou fábricas de desenvolvimento de software. O Roteiro de Métricas de Software(2016) do SISP cita essa utilização do processo em órgãos e em empresas privadas, além dos benefícios obtidos por ambos pela utilização dos mesmo:  “Diversas instituições públicas e privadas têm utilizado a métrica Ponto de Função(PF) nas estimativas e dimensionamento de tamanho funcional de projetos de software devido aos diversos benefícios de utilização desta métrica, destacando-se: regras de contagem objetivas, independência da solução tecnológica utilizada e facilidade de estimativa nas fases iniciais do ciclo de vida do software” \cite{SISP:2016}. 
